@@ -5,113 +5,309 @@ import * as POSTPROCESSING from "postprocessing";
 
 class Header extends Component {
   componentDidMount() {
-    let scene,
-      camera,
-      cloudParticles = [],
-      composer;
+    var scene, camera, renderer;
+    var container,
+      aspectRatio,
+      HEIGHT,
+      WIDTH,
+      fieldOfView,
+      nearPlane,
+      farPlane,
+      mouseX,
+      mouseY,
+      windowHalfX,
+      windowHalfY,
+      stats,
+      geometry,
+      starStuff,
+      materialOptions,
+      stars;
 
-    let onWindowResize = function () {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
+    let Stats = function () {
+      var startTime = Date.now(),
+        prevTime = startTime;
+      var ms = 0,
+        msMin = Infinity,
+        msMax = 0;
+      var fps = 0,
+        fpsMin = Infinity,
+        fpsMax = 0;
+      var frames = 0,
+        mode = 0;
+
+      var container = document.createElement("div");
+      container.id = "stats";
+      container.addEventListener(
+        "mousedown",
+        function (event) {
+          event.preventDefault();
+          setMode(++mode % 2);
+        },
+        false
+      );
+      container.style.cssText = "width:80px;opacity:0.9;cursor:pointer";
+
+      var fpsDiv = document.createElement("div");
+      fpsDiv.id = "fps";
+      fpsDiv.style.cssText =
+        "padding:0 0 3px 3px;text-align:left;background-color:#002";
+      container.appendChild(fpsDiv);
+
+      var fpsText = document.createElement("div");
+      fpsText.id = "fpsText";
+      fpsText.style.cssText =
+        "color:#0ff;font-family:Helvetica,Arial,sans-serif;font-size:9px;font-weight:bold;line-height:15px";
+      fpsText.innerHTML = "FPS";
+      fpsDiv.appendChild(fpsText);
+
+      var fpsGraph = document.createElement("div");
+      fpsGraph.id = "fpsGraph";
+      fpsGraph.style.cssText =
+        "position:relative;width:74px;height:30px;background-color:#0ff";
+      fpsDiv.appendChild(fpsGraph);
+
+      while (fpsGraph.children.length < 74) {
+        var bar = document.createElement("span");
+        bar.style.cssText =
+          "width:1px;height:30px;float:left;background-color:#113";
+        fpsGraph.appendChild(bar);
+      }
+
+      var msDiv = document.createElement("div");
+      msDiv.id = "ms";
+      msDiv.style.cssText =
+        "padding:0 0 3px 3px;text-align:left;background-color:#020;display:none";
+      container.appendChild(msDiv);
+
+      var msText = document.createElement("div");
+      msText.id = "msText";
+      msText.style.cssText =
+        "color:#0f0;font-family:Helvetica,Arial,sans-serif;font-size:9px;font-weight:bold;line-height:15px";
+      msText.innerHTML = "MS";
+      msDiv.appendChild(msText);
+
+      var msGraph = document.createElement("div");
+      msGraph.id = "msGraph";
+      msGraph.style.cssText =
+        "position:relative;width:74px;height:30px;background-color:#0f0";
+      msDiv.appendChild(msGraph);
+
+      while (msGraph.children.length < 74) {
+        var bar = document.createElement("span");
+        bar.style.cssText =
+          "width:1px;height:30px;float:left;background-color:#131";
+        msGraph.appendChild(bar);
+      }
+
+      var setMode = function (value) {
+        mode = value;
+
+        switch (mode) {
+          case 0:
+            fpsDiv.style.display = "block";
+            msDiv.style.display = "none";
+            break;
+          case 1:
+            fpsDiv.style.display = "none";
+            msDiv.style.display = "block";
+            break;
+        }
+      };
+
+      var updateGraph = function (dom, value) {
+        var child = dom.appendChild(dom.firstChild);
+        child.style.height = value + "px";
+      };
+
+      return {
+        REVISION: 11,
+
+        domElement: container,
+
+        setMode: setMode,
+
+        begin: function () {
+          startTime = Date.now();
+        },
+
+        end: function () {
+          var time = Date.now();
+
+          ms = time - startTime;
+          msMin = Math.min(msMin, ms);
+          msMax = Math.max(msMax, ms);
+
+          msText.textContent = ms + " MS (" + msMin + "-" + msMax + ")";
+          updateGraph(msGraph, Math.min(30, 30 - (ms / 200) * 30));
+
+          frames++;
+
+          if (time > prevTime + 1000) {
+            fps = Math.round((frames * 1000) / (time - prevTime));
+            fpsMin = Math.min(fpsMin, fps);
+            fpsMax = Math.max(fpsMax, fps);
+
+            fpsText.textContent = fps + " FPS (" + fpsMin + "-" + fpsMax + ")";
+            updateGraph(fpsGraph, Math.min(30, 30 - (fps / 100) * 30));
+
+            prevTime = time;
+            frames = 0;
+          }
+
+          return time;
+        },
+
+        update: function () {
+          startTime = this.end();
+        },
+      };
+    };
+
+    let animate = function () {
+      requestAnimationFrame(animate);
+      render();
+      stats.update();
     };
 
     let render = function () {
-      cloudParticles.forEach((p) => {
-        p.rotation.z -= 0.001;
-      });
-      composer.render(0.1);
-      requestAnimationFrame(render);
+      camera.position.x += (mouseX - camera.position.x) * 0.005;
+      camera.position.y += (-mouseY - camera.position.y) * 0.005;
+      camera.lookAt(scene.position);
+      renderer.render(scene, camera);
     };
 
-    scene = new THREE.Scene();
-    camera = new THREE.PerspectiveCamera(
-      60,
-      window.innerWidth / window.innerHeight,
-      1,
-      1000
-    );
-    camera.position.z = 1;
-    camera.rotation.x = 1.16;
-    camera.rotation.y = -0.12;
-    camera.rotation.z = 0.27;
+    let webGLSupport = function () {
+      /* 	The wizard of webGL only bestows his gifts of power
+          to the worthy.  In this case, users with browsers who 'get it'.		*/
 
-    let ambient = new THREE.AmbientLight(0x555555);
-    scene.add(ambient);
-
-    let directionalLight = new THREE.DirectionalLight(0xff8c19);
-    directionalLight.position.set(0, 0, 1);
-    scene.add(directionalLight);
-
-    let orangeLight = new THREE.PointLight(0xcc6600, 50, 450, 1.7);
-    orangeLight.position.set(200, 300, 100);
-    scene.add(orangeLight);
-    let redLight = new THREE.PointLight(0xd8547e, 50, 450, 1.7);
-    redLight.position.set(100, 300, 100);
-    scene.add(redLight);
-    let blueLight = new THREE.PointLight(0x3677ac, 50, 450, 1.7);
-    blueLight.position.set(300, 300, 200);
-    scene.add(blueLight);
-
-    let renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    scene.fog = new THREE.FogExp2(0x010124, 0.001);
-    renderer.setClearColor(scene.fog.color);
-    document.body.appendChild(renderer.domElement);
-
-    let loader = new THREE.TextureLoader();
-    loader.load("smoke.png", function (texture) {
-      let cloudGeo = new THREE.PlaneBufferGeometry(500, 500);
-      let cloudMaterial = new THREE.MeshLambertMaterial({
-        map: texture,
-        transparent: true,
-      });
-
-      for (let p = 0; p < 50; p++) {
-        let cloud = new THREE.Mesh(cloudGeo, cloudMaterial);
-        cloud.position.set(
-          Math.random() * 800 - 400,
-          500,
-          Math.random() * 500 - 500
+      try {
+        var canvas = document.createElement("canvas");
+        return !!(
+          window.WebGLRenderingContext &&
+          (canvas.getContext("webgl") ||
+            canvas.getContext("experimental-webgl"))
         );
-        cloud.rotation.x = 1.16;
-        cloud.rotation.y = -0.12;
-        cloud.rotation.z = Math.random() * 2 * Math.PI;
-        cloud.material.opacity = 0.55;
-        cloudParticles.push(cloud);
-        scene.add(cloud);
+      } catch (e) {
+        // console.warn('Hey bro, for some reason we\'re not able to use webGL for this.  No biggie, we\'ll use canvas.');
+        return false;
       }
-    });
-    loader.load("stars.jpg", function (texture) {
-      const textureEffect = new POSTPROCESSING.TextureEffect({
-        blendFunction: POSTPROCESSING.BlendFunction.COLOR_DODGE,
-        texture: texture,
-      });
-      textureEffect.blendMode.opacity.value = 0.9;
+    };
 
-      const bloomEffect = new POSTPROCESSING.BloomEffect({
-        blendFunction: POSTPROCESSING.BlendFunction.COLOR_DODGE,
-        kernelSize: POSTPROCESSING.KernelSize.SMALL,
-        useLuminanceFilter: true,
-        luminanceThreshold: 0.3,
-        luminanceSmoothing: 0.75,
-      });
-      bloomEffect.blendMode.opacity.value = 1.5;
+    let onWindowResize = function () {
+      // Everything should resize nicely if it needs to!
+      var WIDTH = window.innerWidth,
+        HEIGHT = window.innerHeight;
 
-      let effectPass = new POSTPROCESSING.EffectPass(
-        camera,
-        bloomEffect,
-        textureEffect
+      camera.aspect = aspectRatio;
+      camera.updateProjectionMatrix();
+      renderer.setSize(WIDTH, HEIGHT);
+    };
+
+    let starForge = function () {
+      /* 	Yep, it's a Star Wars: Knights of the Old Republic reference,
+          are you really surprised at this point? 
+                              */
+      var starQty = 45000;
+      geometry = new THREE.SphereGeometry(1000, 100, 50);
+
+      materialOptions = {
+        size: 1.0, //I know this is the default, it's for you.  Play with it if you want.
+        transparency: true,
+        opacity: 0.7,
+      };
+
+      starStuff = new THREE.PointCloudMaterial(materialOptions);
+
+      // The wizard gaze became stern, his jaw set, he creates the cosmos with a wave of his arms
+
+      for (var i = 0; i < starQty; i++) {
+        var starVertex = new THREE.Vector3();
+        starVertex.x = Math.random() * 2000 - 1000;
+        starVertex.y = Math.random() * 2000 - 1000;
+        starVertex.z = Math.random() * 2000 - 1000;
+
+        geometry.vertices.push(starVertex);
+      }
+
+      stars = new THREE.PointCloud(geometry, starStuff);
+      scene.add(stars);
+    };
+
+    let onMouseMove = function (e) {
+      mouseX = e.clientX - windowHalfX;
+      mouseY = e.clientY - windowHalfY;
+    };
+
+    let init = function () {
+      container = document.createElement("div");
+      document.body.appendChild(container);
+
+      HEIGHT = window.innerHeight;
+      WIDTH = window.innerWidth;
+      aspectRatio = WIDTH / HEIGHT;
+      fieldOfView = 75;
+      nearPlane = 1;
+      farPlane = 1000;
+      mouseX = 0;
+      mouseY = 0;
+
+      windowHalfX = WIDTH / 2;
+      windowHalfY = HEIGHT / 2;
+
+      /* 	fieldOfView — Camera frustum vertical field of view.
+        aspectRatio — Camera frustum aspect ratio.
+        nearPlane — Camera frustum near plane.
+        farPlane — Camera frustum far plane.	
+  
+        - https://threejs.org/docs/#Reference/Cameras/PerspectiveCamera
+  
+         In geometry, a frustum (plural: frusta or frustums) 
+         is the portion of a solid (normally a cone or pyramid) 
+         that lies between two parallel planes cutting it. - wikipedia.		*/
+
+      camera = new THREE.PerspectiveCamera(
+        fieldOfView,
+        aspectRatio,
+        nearPlane,
+        farPlane
       );
-      effectPass.renderToScreen = true;
 
-      composer = new POSTPROCESSING.EffectComposer(renderer);
-      composer.addPass(new POSTPROCESSING.RenderPass(scene, camera));
-      composer.addPass(effectPass);
+      //Z positioning of camera
+
+      camera.position.z = farPlane / 2;
+
+      scene = new THREE.Scene({ antialias: true });
+      scene.fog = new THREE.FogExp2(0x000000, 0.0003);
+
+      // The wizard's about to get busy.
+      starForge();
+
+      //check for browser Support
+      if (webGLSupport()) {
+        //yeah?  Right on...
+        renderer = new THREE.WebGLRenderer({ alpha: true });
+      } else {
+        //No?  Well that's okay.
+        renderer = new THREE.CanvasRenderer();
+      }
+
+      renderer.setClearColor(0x000011, 1);
+      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setSize(WIDTH, HEIGHT);
+      container.appendChild(renderer.domElement);
+
+      stats = new Stats();
+      stats.domElement.style.position = "absolute";
+      stats.domElement.style.top = "0px";
+      stats.domElement.style.right = "0px";
+      container.appendChild(stats.domElement);
 
       window.addEventListener("resize", onWindowResize, false);
-      render();
-    });
+      document.addEventListener("mousemove", onMouseMove, false);
+    };
+
+    init();
+    animate();
   }
 
   render() {
@@ -139,7 +335,7 @@ class Header extends Component {
 
         <div ref={(ref) => (this.mount = ref)} />
 
-        <NavMenu />
+        {/* <NavMenu /> */}
 
         <div className="row banner">
           <div className="banner-text">
