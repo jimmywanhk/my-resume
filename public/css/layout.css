@@ -45,9 +45,7 @@ canvas{
    position: absolute;
    right: 0;
    bottom: 0;
-   min-width: 100%;
-   min-height: 100%;
-   z-index: -10;
+   z-index: -1;
  }
 
 /* vertically center banner section */
@@ -58,6 +56,10 @@ header:before {
    height: 100%;
 }
 header .banner {
+   position:absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
    display: inline-block;
    vertical-align: middle;
    margin: 0 auto;
@@ -674,8 +676,15 @@ call-to-action .button {
 /* g. Testimonials
 /* ------------------------------------------------------------------ */
 
+#bgVideo{
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   z-index: -1;
+ }
+
 #testimonials {
-   background: #1F1F1F url(../images/testimonials-bg.jpg) no-repeat center center;
+   /* background: #1F1F1F url(../images/testimonials-bg.jpg) no-repeat center center; */
    background-size: cover !important;
 	-webkit-background-size: cover !important;
    background-attachment: fixed;

@@ -21,10 +21,6 @@ class Header extends Component {
 
     return (
       <header id="home">
-        {/* <video autoPlay muted loop id="myVideo">
-          <source src="./background-space.mp4" type="video/mp4"></source>
-        </video> */}
-
         <StarsBackground />
 
         {/* <NavMenu /> */}
