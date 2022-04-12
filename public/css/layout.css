@@ -126,11 +126,11 @@ header .scrolldown a {
    line-height: 42px;
    color: #E43F5A;
    border-radius: 100%;
-
-   -webkit-transition: all .3s ease-in-out;
-   -moz-transition: all .3s ease-in-out;
-   -o-transition: all .3s ease-in-out;
-   transition: all .3s ease-in-out;
+   
+   -webkit-transition: all .3s linear;
+   -moz-transition: all .3s linear;
+   -o-transition: all .3s linear;
+   transition: all .3s linear;   
 }
 header .scrolldown a:hover { color: #11ABB0; }
 
@@ -215,7 +215,7 @@ ul#nav li.current a { color: #E43F5A; } */
    bottom: 20;
 } */
 
-.custom-navbar{
+.custom-navbar {
    font: 15px 'opensans-bold', sans-serif;
    width: 100%;
    text-transform: uppercase;
@@ -229,18 +229,24 @@ ul#nav li.current a { color: #E43F5A; } */
    padding: 0;
 }
 
-.navbar > .container > button{
+.navbar > .container > button {
    margin: 10px 0;
    font-size:2rem;
 }
 
-#basic-navbar-nav > div > a{
+#basic-navbar-nav > div > a {
    color: white;
 }
 
-#basic-nav-dropdown{
+#basic-navbar-nav > div > a:hover {
+   color: #11ABB0;
+}
+
+#basic-nav-dropdown {
    color: white;
 }
+
+.current { color: #E43F5A !important; } 
 
 /* ------------------------------------------------------------------ */
 /* c. About Section
@@ -317,7 +323,7 @@ ul#nav li.current a { color: #E43F5A; } */
 }
 #resume h3 {
    font: 25px/30px 'opensans-bold', sans-serif;
-   color: #11ABB0;
+   color: #E43F5A;
 }
 
 #resume .header-col { padding-top: 9px; }
@@ -366,7 +372,7 @@ ul#nav li.current a { color: #E43F5A; } */
 }
 .bars li em {
 	font: 15px 'opensans-bold', sans-serif;
-   color: #ffffff;
+   color: #E43F5A;
 	text-transform: uppercase;
    letter-spacing: 2px;
 	font-weight: normal;
@@ -380,7 +386,7 @@ ul#nav li.current a { color: #E43F5A; } */
 
    margin: 0;
    padding-right: 24px;
-  	background: #E43F5A;;
+  	background: #838C95;;
    display: inline-block;
   	height: 42px;
    line-height: 42px;
@@ -1051,13 +1057,13 @@ footer .social-links li {
 footer .social-links li:first-child { margin-left: 0; }
 
 /* Go To Top Button */
-#go-top {
+.go-top {
 	position: absolute;
 	top: -24px;
    left: 50%;
    margin-left: -30px;
 }
-#go-top a {
+.go-top a {
 	text-decoration: none;
 	border: 0 none;
 	display: block;
@@ -1065,15 +1071,17 @@ footer .social-links li:first-child { margin-left: 0; }
 	height: 60px;
 	background-color: #E43F5A;
 
-	-webkit-transition: all 0.2s ease-in-out;
-   -moz-transition: all 0.2s ease-in-out;
-   -o-transition: all 0.2s ease-in-out;
-   -ms-transition: all 0.2s ease-in-out;
-   transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s linear;
+   -moz-transition: all 0.2s linear;
+   -o-transition: all 0.2s linear;
+   -ms-transition: all 0.2s linear;
+   transition: all 0.2s linear;
 
    color: #fff;
    font-size: 21px;
    line-height: 60px;
  	border-radius: 100%;
 }
-#go-top a:hover { background-color: #0F9095; }
+.go-top a:hover { background-color: #0F9095; }
+
+.icon-up-open{color: white;}

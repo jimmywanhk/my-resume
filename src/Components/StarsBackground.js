@@ -68,11 +68,11 @@ class StarsBackground extends Component {
 
       materialOptions = {
         size: 1.0, //I know this is the default, it's for you.  Play with it if you want.
-        transparency: true,
+        //transparency: true,
         opacity: 0.7,
       };
 
-      starStuff = new THREE.PointCloudMaterial(materialOptions);
+      starStuff = new THREE.PointsMaterial(materialOptions);
 
       // The wizard gaze became stern, his jaw set, he creates the cosmos with a wave of his arms
 
@@ -85,7 +85,7 @@ class StarsBackground extends Component {
         geometry.vertices.push(starVertex);
       }
 
-      stars = new THREE.PointCloud(geometry, starStuff);
+      stars = new THREE.Points(geometry, starStuff);
       scene.add(stars);
     };
 

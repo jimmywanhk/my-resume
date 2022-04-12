@@ -14,7 +14,9 @@ export class NavMenu extends Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="m-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link className="current" href="#home">
+                Home
+              </Nav.Link>
               <Nav.Link href="#about">About</Nav.Link>
               <Nav.Link href="#resume">Resume</Nav.Link>
               <Nav.Link href="#portfolio">Works</Nav.Link>
