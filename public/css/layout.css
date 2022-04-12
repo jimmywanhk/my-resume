@@ -22,7 +22,10 @@
 /* a. General Styles
 /* ------------------------------------------------------------------ */
 
- body { background: #0f0f0f; } 
+ body { 
+    background: #0f0f0f;
+    overflow-x: hidden;
+    } 
 
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
@@ -44,7 +47,7 @@ header {
 canvas{
    position: absolute;
    right: 0;
-   bottom: 0;
+   top: 0;
    z-index: -1;
  }
 
@@ -187,7 +190,7 @@ ul#nav li a {
 ul#nav li a:active { background-color: transparent !important; }
 ul#nav li.current a { color: #E43F5A; } */
 
-.nav-wrap {
+/*.nav-wrap {
    font: 15px 'opensans-bold', sans-serif;
    width: 100%;
    text-transform: uppercase;
@@ -210,7 +213,34 @@ ul#nav li.current a { color: #E43F5A; } */
    position: fixed;
    right: 9999;
    bottom: 20;
-} 
+} */
+
+.custom-navbar{
+   font: 15px 'opensans-bold', sans-serif;
+   width: 100%;
+   text-transform: uppercase;
+   letter-spacing: 2.5px;
+   margin: 0 auto;   
+   position: fixed;
+   left: 0;
+   top: 0;
+   z-index: 1;
+   background-color: rgb(15,15,15);
+   padding: 0;
+}
+
+.navbar > .container > button{
+   margin: 10px 0;
+   font-size:2rem;
+}
+
+#basic-navbar-nav > div > a{
+   color: white;
+}
+
+#basic-nav-dropdown{
+   color: white;
+}
 
 /* ------------------------------------------------------------------ */
 /* c. About Section
