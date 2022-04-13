@@ -26,8 +26,8 @@ class StarsBackground extends Component {
     };
 
     let render = function () {
-      camera.position.x += (mouseX - camera.position.x) * 0.005;
-      camera.position.y += (-mouseY - camera.position.y) * 0.005;
+      camera.position.x += (mouseX - camera.position.x) * 0.01;
+      camera.position.y += (-mouseY - camera.position.y) * 0.01;
       camera.lookAt(scene.position);
       renderer.render(scene, camera);
     };

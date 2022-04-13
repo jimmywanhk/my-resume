@@ -19,7 +19,14 @@ class Testimonials extends Component {
 
     return (
       <section id="testimonials">
-        <video playsInline autoPlay loop muted id="bgVideo">
+        <video
+          playsInline
+          autoPlay
+          loop
+          muted
+          id="bgVideo"
+          poster="./video-poster.png"
+        >
           <source type="video/webm" src="./background-space.webm"></source>
         </video>
         <div className="text-container">
