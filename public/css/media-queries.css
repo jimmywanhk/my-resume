@@ -187,6 +187,9 @@
       border: none;
    }  
 
+   #basic-navbar-nav > div > a {
+      margin: 0 15px;
+   }
 
    /* Header Styles
    -------------------------------------------------------------------- */
@@ -399,11 +402,9 @@
 
 }
 
-
-
-
-
-
-
-
-
+@media (min-width: 100px){
+   #basic-navbar-nav > div > a {
+      margin-left: 10px;
+      margin-bottom: 15px;
+   }
+}

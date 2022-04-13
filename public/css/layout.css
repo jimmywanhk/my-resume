@@ -258,19 +258,6 @@ ul#nav li.current a { color: #E43F5A; } */
 
 .current { color: #E43F5A !important; } 
 
-@media (min-width: 460px){
-   #basic-navbar-nav > div > a {
-      margin-left: 10px;
-      margin-bottom: 15px;
-   }
-}
-
-@media (min-width: 768px){
-   #basic-navbar-nav > div > a {
-      margin: 0 15px;
-   }
-}
-
 /* ------------------------------------------------------------------ */
 /* c. About Section
 /* ------------------------------------------------------------------ */
