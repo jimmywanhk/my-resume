@@ -34,7 +34,7 @@ class Contact extends Component {
         </div>
 
         <div className="row">
-          <div className="eight columns">
+          <div className="eight columns w-100">
             <form action="" method="post" id="contactForm" name="contactForm">
               <fieldset>
                 <div>
@@ -103,20 +103,6 @@ class Contact extends Component {
               <br />
             </div>
           </div>
-
-          <aside className="four columns footer-widgets">
-            <div className="widget widget_contact">
-              <h4>Address and Phone</h4>
-              <p className="address">
-                {name}
-                <br />
-                {street} <br />
-                {city}, {state} {zip}
-                <br />
-                <span>{phone}</span>
-              </p>
-            </div>
-          </aside>
         </div>
       </section>
     );
