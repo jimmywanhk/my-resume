@@ -19,8 +19,8 @@ class Testimonials extends Component {
 
     return (
       <section id="testimonials">
-        <video autoPlay muted loop playsinline id="bgVideo">
-          <source src="./background-space.mp4" type="video/mp4"></source>
+        <video playsInline autoPlay loop muted id="bgVideo">
+          <source type="video/webm" src="./background-space.webm"></source>
         </video>
         <div className="text-container">
           <div className="row">
