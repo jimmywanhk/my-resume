@@ -6,7 +6,7 @@ export class NavMenu extends Component {
     return (
       <Navbar
         className="custom-navbar"
-        expand="lg"
+        expand="md"
         variant="dark"
         collapseOnSelect="true"
       >

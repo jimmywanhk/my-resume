@@ -1,0 +1,30 @@
+steps:
+  # Build the container image
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      ["build", 
+      "-t", "gcr.io/${_PROJECT_ID}/${_FOLDER_NAME}:$SHORT_SHA", 
+      "-t", "gcr.io/${_PROJECT_ID}/${_FOLDER_NAME}:latest", 
+      "--cache-from", "gcr.io/${_PROJECT_ID}/${_FOLDER_NAME}:latest",
+      "."]
+      
+  # Push the container image to Container Registry
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["push", "gcr.io/${_PROJECT_ID}/${_FOLDER_NAME}"]
+    
+  # Deploy container image to Cloud Run
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: gcloud
+    args:
+      - "run"
+      - "deploy"
+      - "${_SERVICE_NAME}"
+      - "--image"
+      - "gcr.io/${_PROJECT_ID}/${_FOLDER_NAME}:latest"
+      - "--region"
+      - "${_REGION}"
+      - "--platform"
+      - "managed"
+      
+images:
+  - "gcr.io/${_PROJECT_ID}/${_FOLDER_NAME}:latest"

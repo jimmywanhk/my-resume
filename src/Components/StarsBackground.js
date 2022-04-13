@@ -66,10 +66,14 @@ class StarsBackground extends Component {
       var starQty = 45000;
       geometry = new THREE.SphereGeometry(1000, 100, 50);
 
+      let sprite = new THREE.TextureLoader().load("star.png");
+
       materialOptions = {
         size: 1.0, //I know this is the default, it's for you.  Play with it if you want.
         //transparency: true,
         opacity: 0.7,
+        map: sprite,
+        //color: 0x11ABB0, //star color
       };
 
       starStuff = new THREE.PointsMaterial(materialOptions);
