@@ -41,6 +41,7 @@ class App extends Component {
     this.getResumeData();
   }
 
+
   render() {
     return (
       <div className="App">
