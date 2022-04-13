@@ -345,7 +345,7 @@ ul#nav li.current a { color: #E43F5A; } */
    border-bottom: 1px solid #E8E8E8;
 }
 #resume .info {
-   font: 16px/24px 'librebaskerville-italic', serif;
+   font: 16px/24px 'librebaskerville-regular', serif;
    color: #ffffff;
    margin-bottom: 18px;
    margin-top: 9px;
@@ -376,8 +376,8 @@ ul#nav li.current a { color: #E43F5A; } */
 .bars li {
    position: relative;
   	margin-bottom: 60px;
-  	background: #838C95;
-  	height: 42px;
+  	border: 1px solid white;
+  	height: 43px;
   	border-radius: 3px;
 }
 .bars li em {
@@ -885,7 +885,7 @@ call-to-action .button {
    background: #1B1B2F;
    padding-top: 96px;
    padding-bottom: 102px;
-   color: #636363;
+   
 }
 #contact .section-head { margin-bottom: 42px; }
 
