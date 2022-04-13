@@ -56,8 +56,8 @@
       height: 114px;
       margin-left: 12px;
    }
-   #about .contact-details { width: 50%; }
-   #about .download { width: 50%; }
+   #about .contact-details { width: 50%; padding: 0px; }
+   #about .download { width: 50%; padding: 0px; }
 
    /* Resume Section
    ------------------------------------------------------------------- */
@@ -216,19 +216,27 @@
    header .social li { margin: 0 10px; }
 
     /* scrolldown link */
-   header .scrolldown { display: none; }
+   /* header .scrolldown { display: none; } */
 
 
-   /* About Section
+   /* About Section   
    -------------------------------------------------------------------- */
-   #about .profile-pic { display: none; }
+   .profile-pic-div{
+      width: 100% !important;
+      text-align: center;
+      margin-bottom: 50px;
+   }
+
+   #about .profile-pic { margin: auto 0; } 
    #about .download .button {
       width: 100%;
       text-align: center;
       padding: 15px 20px;
    }
-   #about .main-col { padding-right: 30px; }
-
+   #about .main-col { 
+      padding-right: 30px; 
+      text-align: center;
+   }
 
    /* Resume Section
    --------------------------------------------------------------------- */
@@ -240,7 +248,19 @@
    #resume h1 { letter-spacing: 3px; }
    #resume .main-col { padding-right: 30px; }
    #resume h3, #resume .info { text-align: center; }
-      
+   
+   .education > div{
+      width: 100% !important;
+   }
+
+   .work > div{
+      width: 100% !important;
+   }
+
+   .skill > div{
+      width: 100% !important;
+   }
+
    .bars { width: 100%; }
 
 
@@ -325,7 +345,7 @@
    ------------------------------------------------------------------------ */
   
    /* copyright */
-   footer .copyright li:before { content: none; }
+   /* footer .copyright li:before { content: none; } */
    footer .copyright li { margin-right: 12px; }
 
    /* social links */

@@ -258,6 +258,19 @@ ul#nav li.current a { color: #E43F5A; } */
 
 .current { color: #E43F5A !important; } 
 
+@media (min-width: 460px){
+   #basic-navbar-nav > div > a {
+      margin-left: 10px;
+      margin-bottom: 15px;
+   }
+}
+
+@media (min-width: 768px){
+   #basic-navbar-nav > div > a {
+      margin: 0 15px;
+   }
+}
+
 /* ------------------------------------------------------------------ */
 /* c. About Section
 /* ------------------------------------------------------------------ */
@@ -287,7 +300,7 @@ ul#nav li.current a { color: #E43F5A; } */
    height: 120px;
    border-radius: 100%;
 }
-#about .contact-details { width: 41.66667%; }
+#about .contact-details { width: 41.66667%; padding-left: 0px; }
 #about .download {
    width: 58.33333%;
    padding-top: 6px;
