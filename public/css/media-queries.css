@@ -185,10 +185,6 @@
       margin: 12px 0; 
       line-height: 16px; /* reset line-height from 48px */
       border: none;
-   }  
-
-   #basic-navbar-nav > div > a {
-      margin: 0 15px;
    }
 
    /* Header Styles
@@ -405,9 +401,17 @@
 
 }
 
+
 @media (min-width: 100px){
    #basic-navbar-nav > div > a {
       margin-left: 10px;
       margin-bottom: 15px;
+   }
+}
+
+
+@media (min-width: 767px) {
+   #basic-navbar-nav > div > a {
+      margin-bottom: 0px;
    }
 }
