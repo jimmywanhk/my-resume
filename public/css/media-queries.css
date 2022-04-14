@@ -35,7 +35,7 @@
       letter-spacing: -1px;      
    }
    header .banner-text h3 {
-      font: 17px/1.9em 'librebaskerville-regular', serif;
+      font: 17px/1.9em 'opensans-regular', serif;
       width: 80%;
    }
    header .banner-text hr {
@@ -202,7 +202,7 @@
       font: 68px/1.1em;
     }
    header .banner-text h3 {
-      font: 16px/1.9em 'librebaskerville-regular', serif;
+      font: 16px/1.9em 'opensans-regular', serif;
       width: 85%;
    }
    header .banner-text hr {
@@ -291,18 +291,21 @@
    ----------------------------------------------------------------------- */
    #testimonials .text-container { text-align: center; }
    #testimonials h1 {
-      font: 16px/24px 'opensans-bold', sans-serif;
+      font: 16px/24px 'librebaskerville-bold', sans-serif;
       text-align: center;
       margin-bottom: 30px;
       text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
    }
    #testimonials h1 span { display: block; }
+   #testimonials .header-col  { width: 100% !important; }
    #testimonials .header-col h1:before { content: none; }
    #testimonials blockquote { padding-bottom: 24px; }
    #testimonials blockquote p {
       font-size: 20px;
       line-height: 42px;      
    }
+
+   #testimonials blockquote cite { margin-bottom: 30px; }
 
    /* Control Nav */
    .flex-control-nav {
@@ -322,7 +325,7 @@
       text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
    }  
    #contact h1 span { display: block; }
-   #contact .header-col { padding-top: 0; }
+   #contact .header-col { padding-top: 0; width: 100% !important; }
    #contact .header-col h1:before { content: none;	}
    #contact .section-head p.lead { text-align: center;}
 
@@ -385,7 +388,7 @@
       margin: 0 auto 24px auto;
    }
    header .banner-text h3 {
-      font: 14px/1.9em 'librebaskerville-regular', sans-serif;
+      font: 14px/1.9em 'opensans-regular', sans-serif;
       width: 90%;
    }
   

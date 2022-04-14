@@ -46,17 +46,17 @@
   },
   "resume": {
     "skillmessage": "Here you can create a short write-up of your skills to show off to employers",
-    "education": [
+    "education": [      
       {
-        "school": "University?",
-        "degree": "Masters in Beer tasting",
-        "graduated": "April 2007",
+        "school": "Project Management Institute",
+        "degree": "Project Management Professional (PMP) Certification",
+        "graduated": "March 2003",
         "description": "Describe your experience at school, what you learned, what useful skills you have acquired etc."
       },
       {
-        "school": "School #1 Maybe College?",
-        "degree": "What did you study 101",
-        "graduated": "March 2003",
+        "school": "City University of Hong Kong",
+        "degree": "Bachelor of Engineering (Honours) in e-Logistics and Technology Management",
+        "graduated": "2012 - 2015",
         "description": "Describe your experience at school, what you learned, what useful skills you have acquired etc."
       }
     ],
@@ -124,12 +124,16 @@
   "testimonials": {
     "testimonials": [
       {
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu sem vel lorem sollicitudin pharetra congue ut ante. Pellentesque consequat augue et sapien dapibus viverra. Morbi vulputate elit lacus, non congue nisl iaculis in. Nulla facilisi. Duis sit amet varius ipsum, quis vestibulum enim. Ut nec nisl ante.",
-        "user": "Lorem Ipsum"
+        "text": "I have been consistently impressed by both Jimmy's attitude towards his work and his performance on the job. Jimmy is a very responsible person. His strong customer-oriented mind and helpful attitude are well appreciated by the users supported by him.",
+        "user": "Simon Wong - Senior Application Manager at Intertek Testing Services HK Ltd."
       },
       {
-        "text": "Proin convallis ligula vel dictum vehicula. Morbi luctus, augue at placerat eleifend, erat nibh convallis diam, eget dignissim dolor nisi rutrum nulla.",
-        "user": "Lorem Ipsum2"
+        "text": "Jimmy Wan is a living example of ''Self-Performance  management to drive operational Xcellence''.",
+        "user": "André Lacroix - CEO at Intertek Group"
+      },
+      {
+        "text": "Jimmy showed initiative to learn quickly and was able to complete his assignments on time. I would recommend Jimmy to any potential employer.",
+        "user": "Sunny Ho - Software Development Manager at VHSoft Technologies Co., Ltd."
       }
     ]
   }
