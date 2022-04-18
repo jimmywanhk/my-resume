@@ -103,9 +103,9 @@ class StarsBackground extends Component {
       mouseY = e.touches[0].clientY - windowHalfY;
     };
 
-    let handleMotionEvent = function (e) {
-      mouseX = e.accelerationIncludingGravity.x - windowHalfX;
-      mouseY = e.accelerationIncludingGravity.y - windowHalfY;
+    let handleOrientationEvent = function (e) {
+      mouseX = e.beta - windowHalfX;
+      mouseY = e.gamma - windowHalfY;
     };
 
     let init = function () {
@@ -169,7 +169,7 @@ class StarsBackground extends Component {
       window.addEventListener("resize", onWindowResize, false);
       document.addEventListener("mousemove", onMouseMove, false);
       //document.addEventListener("touchmove", onTouchMove, false);
-      window.addEventListener("devicemotion", handleMotionEvent, false);
+      window.addEventListener("deviceorientation", handleOrientationEvent, false);
     };
 
     init();
