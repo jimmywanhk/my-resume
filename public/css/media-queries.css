@@ -403,6 +403,10 @@
 
 
 @media (min-width: 100px){
+   .requestOrientation{
+      display: block;
+   }
+   
    #basic-navbar-nav > div > a {
       margin-left: 10px;
       margin-bottom: 15px;
@@ -411,6 +415,10 @@
 
 
 @media (min-width: 767px) {
+   .requestOrientation{
+      display: none;
+   }
+
    #basic-navbar-nav > div > a {
       margin-bottom: 0px;
    }

@@ -121,12 +121,28 @@ header .social li {
 header .social li a { color: #fff; }
 header .social li a:hover { color: #0DCAF0; }
 
+.requestOrientation{
+   position: absolute;
+   bottom: 100px;
+   left: 50%;
+   color: #fff;
+   display: block;
+   height: 42px;
+   width: 42px;
+   font-size: 42px;
+   line-height: 42px;
+   color: #FF3B5B;
+   border-radius: 100%;
+   margin-left: 8.4px;
+}
+
+.requestOrientation:hover { cursor:pointer; color: #0DCAF0; }
+
 /* scrolldown link */
 header .scrolldown a {
    position: absolute;
    bottom: 30px;
    left: 50%;
-   margin-left: -29px;
    color: #fff;
    display: block;
    height: 42px;
