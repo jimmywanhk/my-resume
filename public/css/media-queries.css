@@ -321,6 +321,7 @@
       text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
    }  
    #contact h1 span { display: block; }
+   #contact .leadDiv { display: none; }
    #contact .header-col { padding-top: 0; width: 100% !important; }
    #contact .header-col h1:before { content: none;	}
    #contact .section-head p.lead { text-align: center;}
@@ -403,6 +404,10 @@
 
 
 @media (min-width: 100px){
+   #resume .workDescriptions{
+      margin-left: 7rem;
+   }
+
    .requestOrientation{
       display: block;
    }
@@ -415,6 +420,10 @@
 
 
 @media (min-width: 767px) {
+   #resume .workDescriptions{
+      margin-left: 3rem;
+   }
+
    .requestOrientation{
       display: none;
    }

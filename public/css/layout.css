@@ -143,6 +143,7 @@ header .scrolldown a {
    position: absolute;
    bottom: 30px;
    left: 50%;
+   margin-left: -29px;
    color: #fff;
    display: block;
    height: 42px;
@@ -379,9 +380,22 @@ ul#nav li.current a { color: #FF3B5B; } */
 /*	Skill Bars
 /*----------------------------------------------*/
 
+.skills-carousel {   
+   min-height: 500px;
+}
+
+.skillsCatDiv{
+   padding-bottom: 3rem;
+   text-align: center;
+}
+
+.skillCat {   
+   color: #FF3B5B;
+}
+
 .bars {
-	width: 95%;
-	float: left;
+   margin: 0 7rem;	
+	/* float: left; */
 	padding: 0;
 	text-align: left;
 }
@@ -393,12 +407,12 @@ ul#nav li.current a { color: #FF3B5B; } */
    position: relative;
   	margin-bottom: 60px;
   	border: 1px solid white;
-  	height: 43px;
+  	height: 44px;
   	border-radius: 3px;
 }
 .bars li em {
 	font: 15px 'opensans-bold', sans-serif;
-   color: #FF3B5B;
+   color: white;
 	text-transform: uppercase;
    letter-spacing: 2px;
 	font-weight: normal;
@@ -934,6 +948,11 @@ call-to-action .button {
    color: #FF3B5B;
    margin-bottom: 6px;
 }
+#contact .leadDiv {
+   margin: auto;
+   text-align: center;
+   width: 20%;
+}
 #contact p.lead {
    font: 18px/36px 'opensans-light', sans-serif;
    padding-right: 3%;
@@ -1036,7 +1055,7 @@ call-to-action .button {
 /* ------------------------------------------------------------------ */
 
 footer {
-   padding-top: 48px;
+   padding-top: 65px;
    margin-bottom: 48px;
    color: #303030;
    font-size: 14px;

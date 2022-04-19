@@ -18,8 +18,6 @@ class Footer extends Component {
       <footer>
         <div>
           <div>
-            <ul className="social-links">{networks}</ul>
-
             <ul className="copyright">
               <li></li>
               <li>

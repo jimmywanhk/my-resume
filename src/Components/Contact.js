@@ -28,8 +28,8 @@ class Contact extends Component {
             </h1>
           </div>
 
-          <div className="ten columns">
-            <p className="lead">{message}</p>
+          <div className="leadDiv">
+            <p className="lead">Get In Touch.</p>
           </div>
         </div>
 
