@@ -163,28 +163,105 @@
         "category": "Frontend Development",
         "items": [
           {
-          "name": "React",
+            "name": "HTML",
+            "level": "60%"
+          },
+          {
+            "name": "CSS",
+            "level": "60%"
+          },
+          {
+          "name": "JavaScript",
           "level": "60%"
         },
         {
-          "name": "Vue",
+          "name": "Vue.js",
           "level": "55%"
         },
         {
-          "name": "Vue",
+          "name": "React.js",
           "level": "55%"
-        }        
+        },
+        {
+          "name": "Tailwind CSS",
+          "level": "55%"
+        },
+        {
+          "name": "Bootstrap",
+          "level": "55%"
+        },
+        {
+          "name": "EJS",
+          "level": "55%"
+        },
+        {
+          "name": "jQuery",
+          "level": "55%"
+        },
+        {
+          "name": "Font Awesome",
+          "level": "55%"
+        }
       ]
       },
       {
         "category": "Backend Development",
         "items": [
           {
-          "name": "C#",
+            "name": "Entity Framework",
+            "level": "60%"
+          },
+          {
+          "name": "ASP.Net",
           "level": "60%"
         },
         {
+          "name": "ASP.Net Core",
+          "level": "60%"
+        },
+        {
+          "name": "C#",
+          "level": "55%"
+        },
+        {
+          "name": "Visual Basic",
+          "level": "55%"
+        },
+        {
+          "name": "Laravel",
+          "level": "55%"
+        },
+        {
+          "name": "PHP",
+          "level": "55%"
+        },
+        {
           "name": "Node.js",
+          "level": "55%"
+        },
+        {
+          "name": "Express.js",
+          "level": "55%"
+        }
+      ]
+      },
+      {
+        "category": "Database",
+        "items": [
+          {
+          "name": "MS SQL Server",
+          "level": "60%"
+        },
+        {
+          "name": "Sybase Central",
+          "level": "55%"
+        },
+        {
+          "name": "MongoDB",
+          "level": "55%"
+        },
+        {
+          "name": "MySQL",
           "level": "55%"
         }
       ]
@@ -193,11 +270,19 @@
         "category": "Infrastructure",
         "items": [
           {
-          "name": "GCP",
+          "name": "Docker",
           "level": "60%"
         },
         {
-          "name": "AWS",
+          "name": "Azure (Some Resources)",
+          "level": "55%"
+        },
+        {
+          "name": "AWS (Some Resources)",
+          "level": "55%"
+        },
+        {
+          "name": "GCP (Some Resources)",
           "level": "55%"
         }
       ]
@@ -212,19 +297,23 @@
         {
           "name": "Gitlab",
           "level": "55%"
+        },
+        {
+          "name": "Tortoise SVN",
+          "level": "55%"
         }
       ]
       },
       {
         "category": "Project Management",
-        "items": [
-          {
-          "name": "Notion",
-          "level": "60%"
-        },
+        "items": [          
         {
           "name": "Trello",
           "level": "55%"
+        },
+          {
+          "name": "Notion",
+          "level": "60%"
         }
       ]
       },
@@ -232,11 +321,27 @@
         "category": "Miscellaneous",
         "items": [
           {
-          "name": "Git",
+          "name": "DevExpress",
           "level": "60%"
         },
         {
-          "name": "Illustrator",
+          "name": "Aspose",
+          "level": "55%"
+        },
+        {
+          "name": "NPOI",
+          "level": "55%"
+        },
+        {
+          "name": "UiPath",
+          "level": "55%"
+        },
+        {
+          "name": "Kodak Capture Pro",
+          "level": "55%"
+        },
+        {
+          "name": "MS Office",
           "level": "55%"
         }
       ]

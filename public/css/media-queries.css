@@ -416,6 +416,10 @@
       margin-left: 10px;
       margin-bottom: 15px;
    }
+
+   .bars li{
+      width: 65%;
+   }
 }
 
 
@@ -430,5 +434,9 @@
 
    #basic-navbar-nav > div > a {
       margin-bottom: 0px;
+   }
+
+   .bars li{
+      width: 100%;
    }
 }

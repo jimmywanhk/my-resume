@@ -7,10 +7,10 @@ class Resume extends Component {
       var skillmessage = this.props.data.skillmessage;
       var education = this.props.data.education.map(function (education) {
         return (
-          <div key={education.school}>
+          <div key={education.school} className="educationItem">
             <h3>{education.school}</h3>
+            <p className="info">{education.degree}</p>
             <p className="info">
-              {education.degree} <span>&bull;</span>
               <em className="date">{education.graduated}</em>
             </p>
             <p>{education.description}</p>
@@ -20,11 +20,11 @@ class Resume extends Component {
 
       var work = this.props.data.work.map(function (work) {
         return (
-          <div key={work.id}>
+          <div key={work.id} className="workItem">
             <h3>{work.company}</h3>
+            <p className="info">{work.title}</p>
             <p className="info">
-              {work.title}
-              <span>&bull;</span> <em className="date">{work.years}</em>
+              <em className="date">{work.years}</em>
             </p>
             <div className="workDescriptions">
               <ul>
@@ -104,7 +104,7 @@ class Resume extends Component {
           </div>
 
           <div className="nine columns main-col skills-carousel">
-            <Carousel interval={2500}>{skills}</Carousel>
+            <Carousel interval={3000}>{skills}</Carousel>
           </div>
         </div>
       </section>

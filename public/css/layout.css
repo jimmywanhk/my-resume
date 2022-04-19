@@ -361,6 +361,15 @@ ul#nav li.current a { color: #FF3B5B; } */
    padding-bottom: 24px;
    border-bottom: 1px solid #E8E8E8;
 }
+
+.educationItem{
+   margin-bottom: 80px;
+}
+
+.workItem{
+   margin-bottom: 80px;
+}
+
 #resume .info {
    font: 16px/24px 'opensans-regular', serif;
    color: #ffffff;
@@ -381,7 +390,7 @@ ul#nav li.current a { color: #FF3B5B; } */
 /*----------------------------------------------*/
 
 .skills-carousel {   
-   min-height: 500px;
+   min-height: 1150px;
 }
 
 .skillsCatDiv{
