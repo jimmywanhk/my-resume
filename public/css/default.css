@@ -546,6 +546,7 @@ select {
    line-height: 24px;
 	color: black;
 	background: white;
+   border-radius: 8px;
 
 }
 
