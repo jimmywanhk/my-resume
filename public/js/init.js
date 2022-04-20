@@ -20,6 +20,17 @@ jQuery(document).ready(function ($) {
   /* Smooth Scrolling
 ------------------------------------------------------ */
 
+  $(".requestOrientation").on("click", function (e) {
+    e.preventDefault();
+    if (
+      DeviceMotionEvent &&
+      typeof DeviceMotionEvent.requestPermission === "function"
+    ) {
+      DeviceMotionEvent.requestPermission();
+    }
+    $(".requestOrientation").css("display", "none");
+  });
+
   $(".smoothscroll").on("click", function (e) {
     e.preventDefault();
 
@@ -131,44 +142,56 @@ jQuery(document).ready(function ($) {
   /*	contact form
 ------------------------------------------------------*/
 
-  $("form#contactForm button.submit").click(function () {
+  $("form#contactForm button.submit").on("click", function (event) {
+    event.preventDefault();
     $("#image-loader").fadeIn();
 
     var contactName = $("#contactForm #contactName").val();
-    var contactEmail = $("#contactForm #contactEmail").val();
+    var contactEmail = "wankaho@hotmail.com";
     var contactSubject = $("#contactForm #contactSubject").val();
-    var contactMessage = $("#contactForm #contactMessage").val();
+    var contactMessage =
+      $("#contactForm #contactMessage").val() +
+      "%0D%0A%0D%0AWith Regards, %0D%0A" +
+      contactName;
 
-    var data =
-      "contactName=" +
-      contactName +
-      "&contactEmail=" +
+    window.location =
+      "mailto:" +
       contactEmail +
-      "&contactSubject=" +
+      "?subject=" +
       contactSubject +
-      "&contactMessage=" +
+      "&body=" +
       contactMessage;
 
-    $.ajax({
-      type: "POST",
-      url: "inc/sendEmail.php",
-      data: data,
-      success: function (msg) {
-        // Message was sent
-        if (msg == "OK") {
-          $("#image-loader").fadeOut();
-          $("#message-warning").hide();
-          $("#contactForm").fadeOut();
-          $("#message-success").fadeIn();
-        }
-        // There was an error
-        else {
-          $("#image-loader").fadeOut();
-          $("#message-warning").html(msg);
-          $("#message-warning").fadeIn();
-        }
-      },
-    });
-    return false;
+    // var data =
+    //   "contactName=" +
+    //   contactName +
+    //   "&contactEmail=" +
+    //   contactEmail +
+    //   "&contactSubject=" +
+    //   contactSubject +
+    //   "&contactMessage=" +
+    //   contactMessage;
+
+    // $.ajax({
+    //   type: "POST",
+    //   url: "inc/sendEmail.php",
+    //   data: data,
+    //   success: function (msg) {
+    //     // Message was sent
+    //     if (msg == "OK") {
+    //       $("#image-loader").fadeOut();
+    //       $("#message-warning").hide();
+    //       $("#contactForm").fadeOut();
+    //       $("#message-success").fadeIn();
+    //     }
+    //     // There was an error
+    //     else {
+    //       $("#image-loader").fadeOut();
+    //       $("#message-warning").html(msg);
+    //       $("#message-warning").fadeIn();
+    //     }
+    //   },
+    // });
+    // return false;
   });
 });

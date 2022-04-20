@@ -287,7 +287,7 @@
    ----------------------------------------------------------------------- */
    #testimonials .text-container { text-align: center; }
    #testimonials h1 {
-      font: 16px/24px 'librebaskerville-bold', sans-serif;
+      font: 16px/24px 'opensans-bold', sans-serif;
       text-align: center;
       margin-bottom: 30px;
       text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
@@ -404,8 +404,28 @@
 
 
 @media (min-width: 100px){
+   #about > div > div.nine.columns.main-col > p {
+      text-align: left;
+   }
+   
    #resume .workDescriptions{
-      margin-left: 7rem;
+      /* margin-left: 7rem; */
+      margin-top: 4rem;
+   }
+
+   .resume-images-div{
+      text-align: center;
+   }
+
+   .resume-images{
+      float: none;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid black;
+      margin-top: 0.625rem;
+      margin-right: 2.5rem;
+      margin-bottom: 3rem;
    }
 
    .requestOrientation{
@@ -423,9 +443,20 @@
 }
 
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
    #resume .workDescriptions{
-      margin-left: 3rem;
+       margin-left: 3rem; 
+   }
+
+   .resume-images{
+      float: left;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid black;
+      margin-top: 0.625rem;
+      margin-right: 2.5rem;
+      margin-bottom: 3rem;
    }
 
    .requestOrientation{

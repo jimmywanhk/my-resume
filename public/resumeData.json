@@ -48,12 +48,14 @@
     "skillmessage": "Here you can create a short write-up of your skills to show off to employers",
     "education": [      
       {
+        "image": "images/resume/pmi.jfif",
         "school": "Project Management Institute",
         "degree": "Project Management Professional (PMP) Certification",
         "graduated": "Nov 2020",
         "description": "The PMP certification demonstrates to employers, clients and colleagues that a project manager possesses project management knowledge, experience and skills to bring projects to successful completion."
       },
       {
+        "image": "images/resume/cityu.jfif",
         "school": "City University of Hong Kong",
         "degree": "BEng (Hons) in e-Logistics and Technology Management",
         "graduated": "2012 - 2015",
@@ -63,6 +65,7 @@
     "work": [
       {
         "id": 8,
+        "image": "images/resume/d1.jfif",
         "company": "Digital One Solutions Ltd.",
         "title": "Analyst Programmer",
         "years": "Jan 2022 - Feb 2022",
@@ -75,6 +78,7 @@
       },
       {
         "id": 7,
+        "image": "images/resume/waion.jfif",
         "company": "WaiOn Solutions Ltd.",
         "title": "Analyst Programmer",
         "years": "Mar 2021 - Dec 2021",
@@ -87,6 +91,7 @@
       },
       {
         "id": 6,
+        "image": "images/resume/its.jfif",
         "company": "Intertek Testing Services HK Ltd.",
         "title": "System Analyst",
         "years": "Jul 2019 - Feb 2021",
@@ -99,6 +104,7 @@
       },
       {
         "id": 5,
+        "image": "images/resume/its.jfif",
         "company": "Intertek Testing Services HK Ltd.",
         "title": "Analyst Programmer",
         "years": "Oct 2017 - Jun 2019",
@@ -111,6 +117,7 @@
       },
       {
         "id": 4,
+        "image": "images/resume/its.jfif",
         "company": "Intertek Testing Services HK Ltd.",
         "title": "Senior Programmer",
         "years": "Jul 2016 - Sep 2017",
@@ -123,6 +130,7 @@
       },
       {
         "id": 3,
+        "image": "images/resume/its.jfif",
         "company": "Intertek Testing Services HK Ltd.",
         "title": "Programmer",
         "years": "Jul 2015 - Jun 2016",
@@ -135,6 +143,7 @@
       },
       {
         "id": 2,
+        "image": "images/resume/vhsoft.jfif",
         "company": "VHSoft Technologies Co., Ltd.",
         "title": "Programmer Trainee (Part-Time)",
         "years": "Sep 2014 - Feb 2015",
@@ -147,6 +156,7 @@
       },
       {
         "id": 1,
+        "image": "images/resume/vhsoft.jfif",
         "company": "VHSoft Technologies Co., Ltd.",
         "title": "Programmer Trainee",
         "years": "Jun 2014 - Aug 2014",
@@ -163,44 +173,54 @@
         "category": "Frontend Development",
         "items": [
           {
+            "image": "images/skills/html.webp",
             "name": "HTML",
-            "level": "60%"
+            "level": "95%"
           },
           {
+            "image": "images/skills/css.webp",
             "name": "CSS",
-            "level": "60%"
+            "level": "95%"
           },
           {
+            "image": "images/skills/js.webp",
           "name": "JavaScript",
+          "level": "95%"
+        },
+        {
+          "image": "images/skills/vuejs.webp",
+          "name": "Vue.js",
           "level": "60%"
         },
         {
-          "name": "Vue.js",
-          "level": "55%"
-        },
-        {
+          "image": "images/skills/react.webp",
           "name": "React.js",
-          "level": "55%"
+          "level": "60%"
         },
         {
+          "image": "images/skills/tailwind.webp",
           "name": "Tailwind CSS",
           "level": "55%"
         },
         {
+          "image": "images/skills/bootstrap.webp",
           "name": "Bootstrap",
-          "level": "55%"
+          "level": "68%"
         },
         {
+          "image": "images/skills/ejs.webp",
           "name": "EJS",
           "level": "55%"
         },
         {
+          "image": "images/skills/jquery.webp",
           "name": "jQuery",
-          "level": "55%"
+          "level": "80%"
         },
         {
+          "image": "images/skills/font-awesome.webp",
           "name": "Font Awesome",
-          "level": "55%"
+          "level": "90%"
         }
       ]
       },
@@ -208,40 +228,49 @@
         "category": "Backend Development",
         "items": [
           {
+            "image": "images/skills/database.webp",
             "name": "Entity Framework",
-            "level": "60%"
+            "level": "90%"
           },
           {
+            "image": "images/skills/aspnet.webp",
           "name": "ASP.Net",
-          "level": "60%"
+          "level": "95%"
         },
         {
+          "image": "images/skills/netcore.webp",
           "name": "ASP.Net Core",
+          "level": "55%"
+        },
+        {
+          "image": "images/skills/csharp.webp",
+          "name": "C#",
+          "level": "95%"
+        },
+        {
+          "image": "images/skills/vb.webp",
+          "name": "Visual Basic",
+          "level": "95%"
+        },
+        {
+          "image": "images/skills/laravel.webp",
+          "name": "Laravel",
+          "level": "50%"
+        },
+        {
+          "image": "images/skills/php.webp",
+          "name": "PHP",
+          "level": "50%"
+        },
+        {
+          "image": "images/skills/nodejs.webp",
+          "name": "Node.js",
           "level": "60%"
         },
         {
-          "name": "C#",
-          "level": "55%"
-        },
-        {
-          "name": "Visual Basic",
-          "level": "55%"
-        },
-        {
-          "name": "Laravel",
-          "level": "55%"
-        },
-        {
-          "name": "PHP",
-          "level": "55%"
-        },
-        {
-          "name": "Node.js",
-          "level": "55%"
-        },
-        {
+          "image": "images/skills/express.webp",
           "name": "Express.js",
-          "level": "55%"
+          "level": "60%"
         }
       ]
       },
@@ -249,18 +278,22 @@
         "category": "Database",
         "items": [
           {
+            "image": "images/skills/sqlserver.webp",
           "name": "MS SQL Server",
-          "level": "60%"
+          "level": "90%"
         },
         {
+          "image": "images/skills/database.webp",
           "name": "Sybase Central",
-          "level": "55%"
+          "level": "75%"
         },
         {
+          "image": "images/skills/mongodb.webp",
           "name": "MongoDB",
           "level": "55%"
         },
         {
+          "image": "images/skills/mysql.webp",
           "name": "MySQL",
           "level": "55%"
         }
@@ -270,20 +303,24 @@
         "category": "Infrastructure",
         "items": [
           {
+            "image": "images/skills/docker.webp",
           "name": "Docker",
+          "level": "78%"
+        },
+        {
+          "image": "images/skills/azure.webp",
+          "name": "Azure (Some Resources)",
           "level": "60%"
         },
         {
-          "name": "Azure (Some Resources)",
-          "level": "55%"
-        },
-        {
+          "image": "images/skills/aws.webp",
           "name": "AWS (Some Resources)",
-          "level": "55%"
+          "level": "35%"
         },
         {
+          "image": "images/skills/gcp.webp",
           "name": "GCP (Some Resources)",
-          "level": "55%"
+          "level": "45%"
         }
       ]
       },
@@ -291,16 +328,24 @@
         "category": "Version Control",
         "items": [
           {
+            "image": "images/skills/sourcetree.webp",
+            "name": "Sourcetree",
+            "level": "85%"
+          },
+          {
+            "image": "images/skills/github.webp",
           "name": "Github",
-          "level": "60%"
+          "level": "85%"
         },
         {
+          "image": "images/skills/gitlab.webp",
           "name": "Gitlab",
-          "level": "55%"
+          "level": "85%"
         },
         {
+          "image": "images/skills/svn.webp",
           "name": "Tortoise SVN",
-          "level": "55%"
+          "level": "100%"
         }
       ]
       },
@@ -308,12 +353,14 @@
         "category": "Project Management",
         "items": [          
         {
+          "image": "images/skills/trello.webp",
           "name": "Trello",
-          "level": "55%"
+          "level": "80%"
         },
           {
+            "image": "images/skills/notion.webp",
           "name": "Notion",
-          "level": "60%"
+          "level": "80%"
         }
       ]
       },
@@ -321,28 +368,34 @@
         "category": "Miscellaneous",
         "items": [
           {
+            "image": "images/skills/devexpress.webp",
           "name": "DevExpress",
-          "level": "60%"
-        },
+          "level": "90%"
+        },        
         {
+          "image": "images/skills/aspose.webp",
           "name": "Aspose",
-          "level": "55%"
+          "level": "50%"
         },
         {
+          "image": "images/skills/npoi.webp",
           "name": "NPOI",
-          "level": "55%"
+          "level": "85%"
         },
         {
+          "image": "images/skills/uipath.webp",
           "name": "UiPath",
-          "level": "55%"
+          "level": "50%"
         },
         {
+          "image": "images/skills/default.webp",
           "name": "Kodak Capture Pro",
-          "level": "55%"
+          "level": "50%"
         },
         {
+          "image": "images/skills/office.webp",
           "name": "MS Office",
-          "level": "55%"
+          "level": "90%"
         }
       ]
       }

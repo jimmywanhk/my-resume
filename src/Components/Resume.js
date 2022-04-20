@@ -8,6 +8,9 @@ class Resume extends Component {
       var education = this.props.data.education.map(function (education) {
         return (
           <div key={education.school} className="educationItem">
+            <div className="resume-images-div">
+              <img className="resume-images" src={education.image} alt="" />
+            </div>
             <h3>{education.school}</h3>
             <p className="info">{education.degree}</p>
             <p className="info">
@@ -21,6 +24,9 @@ class Resume extends Component {
       var work = this.props.data.work.map(function (work) {
         return (
           <div key={work.id} className="workItem">
+            <div className="resume-images-div">
+              <img className="resume-images" src={work.image} alt="" />
+            </div>
             <h3>{work.company}</h3>
             <p className="info">{work.title}</p>
             <p className="info">
@@ -41,73 +47,83 @@ class Resume extends Component {
       });
 
       var skills = this.props.data.skills.map(function (skills) {
-        //console.log(skills.category);
-        //console.log(skills.items);
-        //var className = "bar-expand " + skills.name.toLowerCase();
         return (
           <Carousel.Item className="skills-carousel">
-            <div className="skillsCatDiv">
-              <h1 className="skillCat">{skills.category}</h1>
+            <h1 className="skillCat">{skills.category}</h1>
+            <div className="skill-bars">
+              {skills.items.map(function (item) {
+                var className = "bar-expand " + item.name.toLowerCase();
+                return (
+                  <div className="bars">
+                    <ul className="skills">
+                      <li key={item.name}>
+                        <span
+                          style={{ width: item.level }}
+                          className={className}
+                        ></span>
+                        <img
+                          className="skills-images"
+                          src={item.image}
+                          alt=""
+                        />
+                        <em>{item.name}</em>
+                      </li>
+                    </ul>
+                  </div>
+                );
+              })}
             </div>
-            {skills.items.map(function (item) {
-              var className = "bar-expand " + item.name.toLowerCase();
-              return (
-                <div className="bars">
-                  <ul className="skills">
-                    <li key={item.name}>
-                      <span
-                        style={{ width: item.level }}
-                        className={className}
-                      ></span>
-                      <em>{item.name}</em>
-                    </li>
-                  </ul>
-                </div>
-              );
-            })}
           </Carousel.Item>
         );
       });
     }
 
     return (
-      <section id="resume">
-        <div className="row education">
-          <div className="three columns header-col">
-            <h1>
-              <span>Education</span>
-            </h1>
-          </div>
+      <div>
+        <section id="resume">
+          <section id="education">
+            <div className="row education">
+              <div className="three columns header-col">
+                <h1>
+                  <span>Education</span>
+                </h1>
+              </div>
 
-          <div className="nine columns main-col">
-            <div className="row item">
-              <div className="twelve columns">{education}</div>
+              <div className="nine columns main-col">
+                <div className="row item">
+                  <div className="twelve columns">{education}</div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </section>
+          <hr />
+          <section id="work">
+            <div className="row work">
+              <div className="three columns header-col">
+                <h1>
+                  <span>Work</span>
+                </h1>
+              </div>
 
-        <div className="row work">
-          <div className="three columns header-col">
-            <h1>
-              <span>Work</span>
-            </h1>
-          </div>
+              <div className="nine columns main-col">{work}</div>
+            </div>
+          </section>
+          <hr />
+          <section id="skills">
+            <div className="row skill">
+              <div className="three columns header-col">
+                <h1>
+                  <span>Skills</span>
+                </h1>
+              </div>
 
-          <div className="nine columns main-col">{work}</div>
-        </div>
-
-        <div className="row skill">
-          <div className="three columns header-col">
-            <h1>
-              <span>Skills</span>
-            </h1>
-          </div>
-
-          <div className="nine columns main-col skills-carousel">
-            <Carousel interval={3000}>{skills}</Carousel>
-          </div>
-        </div>
-      </section>
+              <div className="nine columns main-col skills-carousel">
+                <Carousel interval={2500}>{skills}</Carousel>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
     );
   }
 }

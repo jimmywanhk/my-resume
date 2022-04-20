@@ -51,7 +51,7 @@ class Contact extends Component {
                   />
                 </div>
 
-                <div>
+                {/* <div>
                   <label htmlFor="contactEmail">
                     Email <span className="required">*</span>
                   </label>
@@ -63,7 +63,7 @@ class Contact extends Component {
                     name="contactEmail"
                     onChange={this.handleChange}
                   />
-                </div>
+                </div> */}
 
                 <div>
                   <label htmlFor="contactSubject">Subject</label>

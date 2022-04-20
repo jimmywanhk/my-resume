@@ -133,7 +133,7 @@ header .social li a:hover { color: #0DCAF0; }
    line-height: 42px;
    color: #FF3B5B;
    border-radius: 100%;
-   margin-left: 8.4px;
+   margin-left: -21px;
 }
 
 .requestOrientation:hover { cursor:pointer; color: #0DCAF0; }
@@ -356,10 +356,13 @@ ul#nav li.current a { color: #FF3B5B; } */
 #resume .header-col { padding-top: 9px; }
 #resume .main-col { padding-right: 10%; }
 
-.education, .work {
-   margin-bottom: 48px;
-   padding-bottom: 24px;
-   border-bottom: 1px solid #E8E8E8;
+#work{
+   padding-top: 90px;
+   background: #162447;
+}
+
+#skills{
+   padding-top: 90px;
 }
 
 .educationItem{
@@ -390,16 +393,13 @@ ul#nav li.current a { color: #FF3B5B; } */
 /*----------------------------------------------*/
 
 .skills-carousel {   
-   min-height: 1150px;
-}
-
-.skillsCatDiv{
-   padding-bottom: 3rem;
-   text-align: center;
+   min-height: 950px;
 }
 
 .skillCat {   
-   color: #FF3B5B;
+   padding-bottom: 3rem;
+   text-align: center;
+   color: #FF3B5B;   
 }
 
 .bars {
@@ -408,6 +408,16 @@ ul#nav li.current a { color: #FF3B5B; } */
 	padding: 0;
 	text-align: left;
 }
+
+.skill-bars{
+   margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+}
+
 .bars .skills {
   	margin-top: 36px;
    list-style: none;
@@ -416,9 +426,17 @@ ul#nav li.current a { color: #FF3B5B; } */
    position: relative;
   	margin-bottom: 60px;
   	border: 1px solid white;
-  	height: 44px;
+  	height: 22px;
   	border-radius: 3px;
 }
+.skills-images{
+   width: 32px;
+   height: 32px;
+   margin-right: 1.5rem;
+   position: relative;
+	top: -36px;
+}
+
 .bars li em {
 	font: 15px 'opensans-bold', sans-serif;
    color: white;
@@ -426,7 +444,7 @@ ul#nav li.current a { color: #FF3B5B; } */
    letter-spacing: 2px;
 	font-weight: normal;
    position: relative;
-	top: -36px;
+	top: -48px;
 }
 .bar-expand {
    position: absolute;
@@ -437,7 +455,7 @@ ul#nav li.current a { color: #FF3B5B; } */
    padding-right: 24px;
   	background: white;
    display: inline-block;
-  	height: 42px;
+  	height: 21px;
    line-height: 42px;
    border-radius: 3px 0 0 3px;
 }
@@ -923,7 +941,7 @@ call-to-action .button {
 /* ------------------------------------------------------------------ */
 
 #contact {
-   background: #1B1B2F;
+   background: #162447;
    padding-top: 96px;
    padding-bottom: 102px;
    

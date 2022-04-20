@@ -109,13 +109,6 @@ class StarsBackground extends Component {
     };
 
     let init = function () {
-      if (
-        DeviceMotionEvent &&
-        typeof DeviceMotionEvent.requestPermission === "function"
-      ) {
-        DeviceMotionEvent.requestPermission();
-      }
-
       container = document.createElement("div");
       document.body.appendChild(container);
 
