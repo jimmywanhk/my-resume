@@ -6,7 +6,7 @@
 
 jQuery(document).ready(function ($) {
   DeviceOrientationEvent.requestPermission().then((response) => {
-    if (response == "granted") {
+    if (response == "granted" || response == "denied") {
       $(".requestOrientation").css("display", "none");
     }
   });
