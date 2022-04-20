@@ -3,7 +3,6 @@ import React, { Component } from "react";
 class Contact extends Component {
   render() {
     function sendMail(e) {
-      console.log(123);
       e.preventDefault();
       window.location = "mailto:xyz@yourapplicationdomain.com";
     }

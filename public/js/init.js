@@ -5,6 +5,12 @@
 -----------------------------------------------------------------------------------*/
 
 jQuery(document).ready(function ($) {
+  DeviceOrientationEvent.requestPermission().then((response) => {
+    if (response == "granted") {
+      $(".requestOrientation").css("display", "none");
+    }
+  });
+
   /*----------------------------------------------------*/
   /* FitText Settings
 ------------------------------------------------------ */
