@@ -173,8 +173,8 @@ class StarsBackground extends Component {
         window.addEventListener(
           "deviceorientation",
           function (eventData) {
-            var tiltX = Math.round(eventData.gamma * 8);
-            var tiltY = Math.round(eventData.beta * 8);
+            var tiltX = Math.round(eventData.gamma * 10);
+            var tiltY = Math.round(eventData.beta * 10);
             deviceOrientationHandler(tiltX, tiltY);
           },
           false

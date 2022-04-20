@@ -431,7 +431,7 @@
       width: 80px;
       height: 80px;
       border-radius: 50%;
-      border: 3px solid black;
+      border: 2px solid black;
       margin-top: 0.625rem;
       margin-right: 0rem;
       margin-bottom: 3rem;
@@ -474,7 +474,7 @@
       width: 80px;
       height: 80px;
       border-radius: 50%;
-      border: 3px solid black;
+      border: 2px solid black;
       margin-top: 0.625rem;
       margin-right: 2.5rem;
       margin-bottom: 3rem;
@@ -489,10 +489,10 @@
    }
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
    .skill-bars{
       position: static;
       -ms-transform: translateY(0);
       transform: translateY(0);
    }
-}
+} */

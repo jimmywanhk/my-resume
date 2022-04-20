@@ -392,8 +392,12 @@ ul#nav li.current a { color: #FF3B5B; } */
 /*	Skill Bars
 /*----------------------------------------------*/
 
+#skills{
+   min-height: 1000px;
+}
+
 .skills-carousel {   
-   min-height: 600px;
+    min-height: 600px; 
 }
 
 .skillCat {   
@@ -410,11 +414,11 @@ ul#nav li.current a { color: #FF3B5B; } */
 }
 
 .skill-bars{
-   margin: 0;
+   /* margin: 0;
   position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  transform: translateY(-50%); */
   width: 100%;
 }
 
