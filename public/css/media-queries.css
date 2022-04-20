@@ -409,7 +409,7 @@
    }
    
    #resume .workDescriptions{
-      /* margin-left: 7rem; */
+       margin-left: 4rem; 
       margin-top: 4rem;
    }
 
@@ -424,7 +424,7 @@
       border-radius: 50%;
       border: 3px solid black;
       margin-top: 0.625rem;
-      margin-right: 2.5rem;
+      margin-right: 0rem;
       margin-bottom: 3rem;
    }
 
@@ -437,15 +437,24 @@
       margin-bottom: 15px;
    }
 
+   .bars {
+      margin: 0 4rem;
+   }
+
    .bars li{
-      width: 65%;
+      width: 70%;
    }
 }
 
+@media (min-width: 500px) {
+   .bars {
+      margin: 0 6.5rem;
+   }
+}
 
 @media (min-width: 768px) {
    #resume .workDescriptions{
-       margin-left: 3rem; 
+       margin-left: 5rem; 
    }
 
    .resume-images{

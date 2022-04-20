@@ -66,7 +66,7 @@ class Resume extends Component {
                           src={item.image}
                           alt=""
                         />
-                        <em>{item.name}</em>
+                        <p>{item.name}</p>
                       </li>
                     </ul>
                   </div>
@@ -118,7 +118,7 @@ class Resume extends Component {
               </div>
 
               <div className="nine columns main-col skills-carousel">
-                <Carousel interval={2500}>{skills}</Carousel>
+                <Carousel interval={18000}>{skills}</Carousel>
               </div>
             </div>
           </section>

@@ -437,14 +437,16 @@ ul#nav li.current a { color: #FF3B5B; } */
 	top: -36px;
 }
 
-.bars li em {
+.bars li p {
 	font: 15px 'opensans-bold', sans-serif;
    color: white;
 	text-transform: uppercase;
    letter-spacing: 2px;
 	font-weight: normal;
    position: relative;
-	top: -48px;
+	top: -66px;
+   left: 40px;
+   word-break: break-all;
 }
 .bar-expand {
    position: absolute;
