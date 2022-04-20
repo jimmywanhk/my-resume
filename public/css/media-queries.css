@@ -404,6 +404,15 @@
 
 
 @media (min-width: 100px){
+   .requestOrientation{
+      display: block;
+   }
+   
+   #basic-navbar-nav > div > a {
+      margin-left: 10px;
+      margin-bottom: 15px;
+   }
+
    #about > div > div.nine.columns.main-col > p {
       text-align: left;
    }
@@ -426,15 +435,10 @@
       margin-top: 0.625rem;
       margin-right: 0rem;
       margin-bottom: 3rem;
-   }
+   }   
 
-   .requestOrientation{
-      display: block;
-   }
-   
-   #basic-navbar-nav > div > a {
-      margin-left: 10px;
-      margin-bottom: 15px;
+   .bars li p {
+      font: 12px 'opensans-bold', sans-serif;
    }
 
    .bars {
@@ -453,6 +457,14 @@
 }
 
 @media (min-width: 768px) {
+   .requestOrientation{
+      display: none;
+   }
+
+   #basic-navbar-nav > div > a {
+      margin-bottom: 0px;
+   }
+
    #resume .workDescriptions{
        margin-left: 5rem; 
    }
@@ -466,17 +478,21 @@
       margin-top: 0.625rem;
       margin-right: 2.5rem;
       margin-bottom: 3rem;
-   }
+   }   
 
-   .requestOrientation{
-      display: none;
-   }
-
-   #basic-navbar-nav > div > a {
-      margin-bottom: 0px;
+   .bars li p {
+      font: 15px 'opensans-bold', sans-serif;
    }
 
    .bars li{
       width: 100%;
+   }
+}
+
+@media (max-width: 768px) {
+   .skill-bars{
+      position: static;
+      -ms-transform: translateY(0);
+      transform: translateY(0);
    }
 }
