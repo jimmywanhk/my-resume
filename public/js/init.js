@@ -7,7 +7,7 @@
 jQuery(document).ready(function ($) {
   if (typeof DeviceMotionEvent.requestPermission === "function") {
     DeviceMotionEvent.requestPermission().then((permissionState) => {
-      if (permissionState === "granted") {
+      if (permissionState === "granted" || permissionState === "denied") {
         $(".requestOrientation").css("display", "none");
       }
     });
