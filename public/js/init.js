@@ -5,11 +5,16 @@
 -----------------------------------------------------------------------------------*/
 
 jQuery(document).ready(function ($) {
-  DeviceOrientationEvent.requestPermission().then((response) => {
-    if (response == "granted" || response == "denied") {
-      $(".requestOrientation").css("display", "none");
-    }
-  });
+  if (
+    DeviceMotionEvent &&
+    typeof DeviceMotionEvent.requestPermission === "function"
+  ) {
+    DeviceMotionEvent.requestPermission().then((response) => {
+      if (response == "granted" || response == "denied") {
+        $(".requestOrientation").css("display", "none");
+      }
+    });
+  }
 
   /*----------------------------------------------------*/
   /* FitText Settings

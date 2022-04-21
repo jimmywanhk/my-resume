@@ -396,6 +396,14 @@ ul#nav li.current a { color: #FF3B5B; } */
    min-height: 1000px;
 }
 
+.carousel-control-prev{
+   min-height: 1000px;
+}
+
+.carousel-control-next{
+   min-height: 1000px;
+}
+
 .skills-carousel {   
     min-height: 600px; 
 }
@@ -448,7 +456,7 @@ ul#nav li.current a { color: #FF3B5B; } */
    letter-spacing: 2px;
 	font-weight: normal;
    position: relative;
-	top: -66px;
+	top: -67px;
    left: 40px;
    word-break: break-all;
 }
