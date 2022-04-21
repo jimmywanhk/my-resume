@@ -5,12 +5,9 @@
 -----------------------------------------------------------------------------------*/
 
 jQuery(document).ready(function ($) {
-  if (
-    DeviceMotionEvent &&
-    typeof DeviceMotionEvent.requestPermission === "function"
-  ) {
-    DeviceMotionEvent.requestPermission().then((response) => {
-      if (response == "granted" || response == "denied") {
+  if (typeof DeviceMotionEvent.requestPermission === "function") {
+    DeviceMotionEvent.requestPermission().then((permissionState) => {
+      if (permissionState === "granted") {
         $(".requestOrientation").css("display", "none");
       }
     });
@@ -33,10 +30,8 @@ jQuery(document).ready(function ($) {
 
   $(".requestOrientation").on("click", function (e) {
     e.preventDefault();
-    if (
-      DeviceMotionEvent &&
-      typeof DeviceMotionEvent.requestPermission === "function"
-    ) {
+
+    if (typeof DeviceMotionEvent.requestPermission === "function") {
       DeviceMotionEvent.requestPermission();
     }
     $(".requestOrientation").css("display", "none");
