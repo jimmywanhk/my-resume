@@ -356,12 +356,12 @@ ul#nav li.current a { color: #FF3B5B; } */
 #resume .header-col { padding-top: 9px; }
 #resume .main-col { padding-right: 10%; }
 
-#work{
+.work{
    padding-top: 90px;
    background: #162447;
 }
 
-#skills{
+.skills-div{
    padding-top: 90px;
 }
 
@@ -392,7 +392,7 @@ ul#nav li.current a { color: #FF3B5B; } */
 /*	Skill Bars
 /*----------------------------------------------*/
 
-#skills{
+.skills-div{
    min-height: 1000px;
 }
 

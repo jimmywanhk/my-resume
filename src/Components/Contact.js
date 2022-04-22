@@ -2,11 +2,6 @@ import React, { Component } from "react";
 
 class Contact extends Component {
   render() {
-    function sendMail(e) {
-      e.preventDefault();
-      window.location = "mailto:xyz@yourapplicationdomain.com";
-    }
-
     if (this.props.data) {
       var name = this.props.data.name;
       var street = this.props.data.address.street;
@@ -89,9 +84,7 @@ class Contact extends Component {
                 </div>
 
                 <div>
-                  <button onClick={sendMail} className="submit">
-                    Submit
-                  </button>
+                  <button className="submit">Submit</button>
                 </div>
               </fieldset>
             </form>

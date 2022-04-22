@@ -79,51 +79,49 @@ class Resume extends Component {
     }
 
     return (
-      <div>
-        <section id="resume">
-          <section id="education">
-            <div className="row education">
-              <div className="three columns header-col">
-                <h1>
-                  <span>Education</span>
-                </h1>
-              </div>
+      <section id="resume">
+        <div className="education">
+          <div className="row education">
+            <div className="three columns header-col">
+              <h1>
+                <span>Education</span>
+              </h1>
+            </div>
 
-              <div className="nine columns main-col">
-                <div className="row item">
-                  <div className="twelve columns">{education}</div>
-                </div>
+            <div className="nine columns main-col">
+              <div className="row item">
+                <div className="twelve columns">{education}</div>
               </div>
             </div>
-          </section>
-          <hr />
-          <section id="work">
-            <div className="row work">
-              <div className="three columns header-col">
-                <h1>
-                  <span>Work</span>
-                </h1>
-              </div>
-
-              <div className="nine columns main-col">{work}</div>
+          </div>
+        </div>
+        <hr />
+        <div className="work">
+          <div className="row work">
+            <div className="three columns header-col">
+              <h1>
+                <span>Work</span>
+              </h1>
             </div>
-          </section>
-          <hr />
-          <section id="skills">
-            <div className="row skill">
-              <div className="three columns header-col">
-                <h1>
-                  <span>Skills</span>
-                </h1>
-              </div>
 
-              <div className="nine columns main-col skills-carousel">
-                <Carousel interval={3000}>{skills}</Carousel>
-              </div>
+            <div className="nine columns main-col">{work}</div>
+          </div>
+        </div>
+        <hr />
+        <div className="skills-div">
+          <div className="row skill">
+            <div className="three columns header-col">
+              <h1>
+                <span>Skills</span>
+              </h1>
             </div>
-          </section>
-        </section>
-      </div>
+
+            <div className="nine columns main-col skills-carousel">
+              <Carousel interval={3000}>{skills}</Carousel>
+            </div>
+          </div>
+        </div>
+      </section>
     );
   }
 }

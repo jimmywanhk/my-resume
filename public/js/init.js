@@ -5,7 +5,10 @@
 -----------------------------------------------------------------------------------*/
 
 jQuery(document).ready(function ($) {
-  if (typeof DeviceMotionEvent.requestPermission === "function") {
+  if (
+    typeof DeviceMotionEvent !== "undefined" &&
+    typeof DeviceMotionEvent.requestPermission === "function"
+  ) {
     DeviceMotionEvent.requestPermission().then((permissionState) => {
       if (permissionState === "granted" || permissionState === "denied") {
         $(".requestOrientation").css("display", "none");
@@ -31,7 +34,10 @@ jQuery(document).ready(function ($) {
   $(".requestOrientation").on("click", function (e) {
     e.preventDefault();
 
-    if (typeof DeviceMotionEvent.requestPermission === "function") {
+    if (
+      typeof DeviceMotionEvent !== "undefined" &&
+      typeof DeviceMotionEvent.requestPermission === "function"
+    ) {
       DeviceMotionEvent.requestPermission();
     }
     $(".requestOrientation").css("display", "none");
@@ -67,9 +73,15 @@ jQuery(document).ready(function ($) {
   sections.waypoint({
     handler: function (event, direction) {
       var active_section;
-
       active_section = $(this);
-      if (direction === "up") active_section = active_section.prev();
+
+      if (direction === "up") {
+        active_section = active_section.prev();
+
+        if (typeof active_section.attr("id") === "undefined") {
+          active_section = active_section.prevAll("section, header").first();
+        }
+      }
 
       var active_link = $(
         '#basic-navbar-nav > div > a[href="#' + active_section.attr("id") + '"]'
