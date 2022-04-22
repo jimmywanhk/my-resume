@@ -14,6 +14,8 @@ jQuery(document).ready(function ($) {
         $(".requestOrientation").css("display", "none");
       }
     });
+  } else {
+    $(".requestOrientation").css("display", "none");
   }
 
   /*----------------------------------------------------*/
