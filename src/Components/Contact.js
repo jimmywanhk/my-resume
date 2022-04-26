@@ -83,7 +83,7 @@ class Contact extends Component {
                   ></textarea>
                 </div>
 
-                <div>
+                <div className="submitbtn-div">
                   <button className="submit">Submit</button>
                 </div>
               </fieldset>

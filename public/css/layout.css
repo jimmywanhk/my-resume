@@ -331,7 +331,7 @@ ul#nav li.current a { color: #FF3B5B; } */
 #resume {
    background: #1F4068;
    padding-top: 90px;
-   padding-bottom: 72px;
+   padding-bottom: 44px;
    overflow: hidden;
 }
 
@@ -357,7 +357,7 @@ ul#nav li.current a { color: #FF3B5B; } */
 #resume .main-col { padding-right: 10%; }
 
 .work{
-   padding-top: 90px;
+   padding-top: 45px;
    background: #162447;
 }
 

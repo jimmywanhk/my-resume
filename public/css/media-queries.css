@@ -449,6 +449,14 @@
    .bars li{
       width: 70%;
    }
+
+   .submitbtn-div{
+      text-align: center;
+   }
+
+   .submit{
+      width: 100%;
+   }
 }
 
 @media (min-width: 500px) {
@@ -488,6 +496,14 @@
 
    .bars li{
       width: 100%;
+   }
+   
+   .submitbtn-div{
+      text-align: left;
+   }
+
+   .submit{
+      width: 20%;
    }
 }
 
