@@ -13,9 +13,13 @@ class Header extends Component {
       var networks = this.props.data.social.map(function (network) {
         return (
           <li key={network.name}>
-            <a href={network.url}>
+            {network.skipUrl ? (
               <i className={network.className}></i>
-            </a>
+            ) : (
+              <a href={network.url}>
+                <i className={network.className}></i>
+              </a>
+            )}
           </li>
         );
       });
