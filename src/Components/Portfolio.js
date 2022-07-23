@@ -20,6 +20,10 @@ class Portfolio extends Component {
                   <i className="fa fa-link"></i>
                 </div>
               </a>
+              <div className="portfolio-item-desc">
+                <h5>{projects.title}</h5>
+                <p>{projects.category}</p>
+              </div>
             </div>
           </div>
         );
@@ -30,7 +34,7 @@ class Portfolio extends Component {
       <section id="portfolio">
         <div className="row">
           <div className="twelve columns collapsed">
-            <h1>Check Out Some of My Works.</h1>
+            <h1>Check Out Some of My Works</h1>
 
             <div
               id="portfolio-wrapper"

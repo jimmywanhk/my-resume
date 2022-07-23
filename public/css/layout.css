@@ -620,7 +620,7 @@ ul#nav li.current a { color: #FF3B5B; } */
   margin-bottom: 36px;
 }
 .portfolio-item .item-wrap {
-  background: #fff;
+  /* background: #fff; */
   overflow: hidden;
   position: relative;
 
@@ -681,6 +681,16 @@ ul#nav li.current a { color: #FF3B5B; } */
 .portfolio-item .item-wrap img {
   vertical-align: bottom;
 }
+
+.portfolio-item-desc {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.portfolio-item-desc h5{
+  color:#ff3b5b;
+}
+
 .portfolio-item .portfolio-item-meta {
   padding: 18px;
 }

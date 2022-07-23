@@ -4,7 +4,7 @@
     "occupation": "(Your Occupation Here)",
     "description": "Here will be your description. Use this to describe what you do or whatever you feel best describes yourself to a potential employer",
     "image": "profilepic.jpg",
-    "bio": "I'm a PMP certified former System Analyst with more than 7 years' experience in SDLC. Mainly developed in C#, SQL, JavaScript with ASP.NET framework to provide various web applications and desktop programs to help users eliminate repeating manual works and automate complex tasks. A good project team communicator to drive successful projects. Willing to learn and catch up with the changing technology. Now working as an Analyst Programmer to enhance the functionality of the Azure cloud-based HRMS for expanding his knowledge of technical aspects in SDLC.",
+    "bio": "I'm a PMP-certified former System Analyst with more than 7 years of experience in SDLC. Mainly developed in C#, SQL, JavaScript with ASP.NET framework to provide various web applications and desktop programs to help users eliminate repeating manual works and automate complex tasks. A good project team communicator to drive successful projects. Willing to learn and catch up with the changing technology.",
     "contactmessage": "",
     "email": "wankaho@hotmail.com",
     "phone": "",
@@ -69,12 +69,25 @@
     ],
     "work": [
       {
+        "id": 9,
+        "image": "images/resume/ckh.jfif",
+        "company": "CK Hutchison Holdings Ltd.",
+        "title": "Senior Analyst Programmer",
+        "years": "May 2022 - Present",
+        "description1": "Develop Oracle Apex Form",
+        "description2": "Perform SIT on Oracle HRMS version upgrade",
+        "description3": "Develop RPA tasks using Automation Anywhere",
+        "description4": "",
+        "description5": "",
+        "description6": ""
+      },                       
+      {
         "id": 8,
         "image": "images/resume/d1.jfif",
         "company": "Digital One Solutions Ltd.",
         "title": "Analyst Programmer",
         "years": "Jan 2022 - Feb 2022",
-        "description1": "Intragroup transfer from WaiOn Solutions Ltd.",
+        "description1": "Intercompany transfer from WaiOn Solutions Ltd.",
         "description2": "",
         "description3": "",
         "description4": "",
@@ -87,12 +100,12 @@
         "company": "WaiOn Solutions Ltd.",
         "title": "Analyst Programmer",
         "years": "Mar 2021 - Dec 2021",
-        "description1": "Provide support for Azure cloud based HRMS",
+        "description1": "Provide support for Azure cloud-based HRMS",
         "description2": "System customization based on clients' request",
         "description3": "Participate in product enhancement, implementation and development",
         "description4": "Deploy system and monitor system performance",
         "description5": "Prepare and maintain various documents",
-        "description6": "Handle ad-hoc project as assigned"
+        "description6": "Handle ad-hoc projects as assigned"
       },
       {
         "id": 6,
@@ -105,7 +118,7 @@
         "description3": "Communicate with vendors for technical requirements",
         "description4": "Deploy system and monitor system performance",
         "description5": "Prepare and maintain various documents",
-        "description6": "Handle ad-hoc project as assigned"
+        "description6": "Handle ad-hoc projects as assigned"
       },
       {
         "id": 5,
@@ -128,7 +141,7 @@
         "years": "Jul 2016 - Sep 2017",
         "description1": "Work closely with team members to develop applications according to system specifications",
         "description2": "Provide any other duties as assigned by the supervisors",
-        "description3": "Participate in on-going system support and enhancement",
+        "description3": "Participate in ongoing system support and enhancement",
         "description4": "Liaise with internal users for system and business application support",
         "description5": "",
         "description6": ""
@@ -140,7 +153,7 @@
         "title": "Programmer",
         "years": "Jul 2015 - Jun 2016",
         "description1": "Website, Web Service, Windows Form Application and Command-line application development",
-        "description2": "Program testing, debug and bug fix",
+        "description2": "Program testing, debugging and bug fix",
         "description3": "",
         "description4": "",
         "description5": "",
@@ -167,7 +180,7 @@
         "years": "Jun 2014 - Aug 2014",
         "description1": "Industrial Attachment Scheme Company",
         "description2": "Web page and Windows Form Application development",
-        "description3": "Program testing, debug and bug fix",
+        "description3": "Program testing, debugging and bug fix",
         "description4": "",
         "description5": "",
         "description6": ""
