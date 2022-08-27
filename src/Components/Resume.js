@@ -48,15 +48,15 @@ class Resume extends Component {
 
       var skills = this.props.data.skills.map(function (skills) {
         return (
-          <Carousel.Item className="skills-carousel">
+          <Carousel.Item key={skills.id} className="skills-carousel">
             <h1 className="skillCat">{skills.category}</h1>
             <div className="skill-bars">
               {skills.items.map(function (item) {
                 var className = "bar-expand " + item.name.toLowerCase();
                 return (
-                  <div className="bars">
+                  <div key={item.name} className="bars">
                     <ul className="skills">
-                      <li key={item.name}>
+                      <li>
                         <span
                           style={{ width: item.level }}
                           className={className}

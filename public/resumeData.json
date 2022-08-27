@@ -188,6 +188,7 @@
     ],
     "skills": [
       {
+        "id": 7,
         "category": "Frontend Development",
         "items": [
           {
@@ -243,6 +244,7 @@
         ]
       },
       {
+        "id": 6,
         "category": "Backend Development",
         "items": [
           {
@@ -293,6 +295,7 @@
         ]
       },
       {
+        "id": 5,
         "category": "Database",
         "items": [
           {
@@ -318,6 +321,7 @@
         ]
       },
       {
+        "id": 4,
         "category": "Infrastructure",
         "items": [
           {
@@ -343,6 +347,7 @@
         ]
       },
       {
+        "id": 3,
         "category": "Version Control",
         "items": [
           {
@@ -368,6 +373,7 @@
         ]
       },
       {
+        "id": 2,
         "category": "Project Management",
         "items": [
           {
@@ -383,6 +389,7 @@
         ]
       },
       {
+        "id": 1,
         "category": "Miscellaneous",
         "items": [
           {
