@@ -69,11 +69,10 @@ class StarsBackground extends Component {
       let sprite = new THREE.TextureLoader().load("star.png");
 
       materialOptions = {
-        size: 2, //I know this is the default, it's for you.  Play with it if you want.
+        size: 1.5, //I know this is the default, it's for you.  Play with it if you want.
         //transparency: true,
         opacity: 0.7,
         map: sprite,
-        //color: [0x11abb0], //star color
         vertexColors: THREE.VertexColors,
       };
 
@@ -81,22 +80,21 @@ class StarsBackground extends Component {
 
       // The wizard gaze became stern, his jaw set, he creates the cosmos with a wave of his arms
 
-      /*
-      new THREE.Color(255, 255, 255)
-      new THREE.Color(13, 202, 240)
-      new THREE.Color(255, 59, 91)
-      new THREE.Color(22, 36, 71)
-      new THREE.Color(31, 64, 104)
-      */
+      let colors = [
+        0xffffff, 0x0dcaf0, 0xff3b5b, 0x1f4065, 0x4206f1, 0xfe18d3, 0x270245,
+        0x871a85,
+      ];
 
       for (var i = 0; i < starQty; i++) {
+        let randomNum = Math.floor(Math.random() * (colors.length + 1));
+
         var starVertex = new THREE.Vector3();
         starVertex.x = Math.random() * 2000 - 1000;
         starVertex.y = Math.random() * 2000 - 1000;
         starVertex.z = Math.random() * 2000 - 1000;
 
         geometry.vertices.push(starVertex);
-        geometry.colors.push(new THREE.Color(Math.random() * 0xffffff));
+        geometry.colors.push(new THREE.Color(colors[randomNum]));
       }
 
       stars = new THREE.Points(geometry, starStuff);
