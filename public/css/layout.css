@@ -130,16 +130,18 @@ header .social li a:hover {
 .requestOrientation {
   position: absolute;
   bottom: 100px;
-  left: 50%;
+  /* left: 50%; */
   color: #fff;
   display: block;
   height: 42px;
-  width: 42px;
+  /* width: 42px; */
   font-size: 42px;
   line-height: 42px;
   color: #ff3b5b;
   border-radius: 100%;
-  margin-left: -21px;
+  /* margin-left: -21px; */
+  width: 100%;
+  margin: auto;
 }
 
 .requestOrientation:hover {
@@ -151,16 +153,18 @@ header .social li a:hover {
 header .scrolldown a {
   position: absolute;
   bottom: 30px;
-  left: 50%;
-  margin-left: -29px;
+  /* left: 50%; */
+  /* margin-left: -29px; */
   color: #fff;
   display: block;
   height: 42px;
-  width: 42px;
+  /* width: 42px; */
   font-size: 42px;
   line-height: 42px;
   color: #ff3b5b;
   border-radius: 100%;
+  width: 100%;
+  margin: auto;
 
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
