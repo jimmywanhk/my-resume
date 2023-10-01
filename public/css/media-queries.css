@@ -279,6 +279,7 @@
 
    /* Portfolio Section
    /* ----------------------------------------------------------------- */
+   .portfolio-item { flex: 0 0 100%; }
    #portfolio-wrapper .columns { margin-bottom: 40px; }
    .popup-modal {	max-width: 85%; }
 

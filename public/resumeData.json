@@ -436,6 +436,20 @@
   "portfolio": {
     "projects": [
       {
+        "id": 6,
+        "title": "UiPath Implementation",
+        "category": "CK Hutchison",
+        "image": "uipath.jpg",
+        "url": "images/portfolio/uipath.jpg"
+      },
+      {
+        "id": 5,
+        "title": "Built with UiPath Apps",
+        "category": "CK Hutchison",
+        "image": "uipath-app.jpg",
+        "url": "images/portfolio/uipath-app.jpg"
+      },
+      {
         "id": 4,
         "title": "Reckon HRMS",
         "category": "HR Administration Portal",
@@ -468,7 +482,7 @@
   "testimonials": {
     "testimonials": [
       {
-        "text": "Jimmy is a conscientious & capable IT professional and interacted well with colleagues. During his employment with us, we found his performance to be highly satisfactory.",
+        "text": "Jimmy is a conscientious and capable IT professional and interacted well with colleagues. During his employment with us, we found his performance to be highly satisfactory.",
         "user": "Maggie Chan - Manager - Applications Delivery at CK Hutchison Holdings Ltd."
       },
       {

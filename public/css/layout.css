@@ -611,6 +611,7 @@ ul#nav li.current a { color: #FF3B5B; } */
   padding-top: 90px;
   padding-bottom: 60px;
 }
+
 #portfolio h1 {
   font: 15px/24px "opensans-semibold", sans-serif;
   text-transform: uppercase;
@@ -619,6 +620,17 @@ ul#nav li.current a { color: #FF3B5B; } */
   margin-bottom: 48px;
   color: #fff;
 }
+
+#portfolio-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+
+.portfolio-item {
+  flex: 0 0 50%;
+}
+
 
 /* Portfolio Content */
 #portfolio-wrapper .columns {
