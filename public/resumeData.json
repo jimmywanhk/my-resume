@@ -4,9 +4,9 @@
     "occupation": "(Your Occupation Here)",
     "description": "Here will be your description. Use this to describe what you do or whatever you feel best describes yourself to a potential employer",
     "image": "profilepic.jpg",
-    "bio": "I'm a PMP-certified former System Analyst with more than 7 years of experience in SDLC. Mainly developed in C#, SQL, JavaScript with ASP.NET framework to provide various web applications and desktop programs to help users eliminate repeating manual works and automate complex tasks. A good project team communicator to drive successful projects. Willing to learn and catch up with the changing technology.",
+    "bio": "I'm an AWS SAA-certified and PMP-certified former System Analyst with more than 8 years of experience in SDLC. Mainly developed in C#, SQL, JavaScript with ASP.NET framework to provide various web applications and desktop programs to help users eliminate repeating manual works and automate complex tasks. A good project team communicator to drive successful projects. Willing to learn and catch up with the changing technology.",
     "contactmessage": "",
-    "email": "wankaho@hotmail.com",
+    "email": "jimmyw@jimmythedeveloper.com",
     "phone": "",
     "address": {
       "street": "Sha Tin District",
@@ -53,11 +53,18 @@
     "skillmessage": "Here you can create a short write-up of your skills to show off to employers",
     "education": [
       {
+        "image": "images/resume/aws.jfif",
+        "school": "Amazon Web Services (AWS)",
+        "degree": "AWS Certified Solutions Architect - Associate",
+        "graduated": "Sep 2023",
+        "description": "Earners of this certification have a comprehensive understanding of AWS services and technologies. They demonstrated the ability to build secure and robust solutions using architectural design principles based on customer requirements. Badge owners are able to strategically design well-architected distributed systems that are scalable, resilient, efficient, and fault-tolerant."
+      },
+      {
         "image": "images/resume/pmi.jfif",
         "school": "Project Management Institute",
         "degree": "Project Management Professional (PMP) Certification",
         "graduated": "Nov 2020",
-        "description": "The PMP certification demonstrates to employers, clients and colleagues that a project manager possesses project management knowledge, experience and skills to bring projects to successful completion."
+        "description": "Earners of the globally-recognized Project Management Professional (PMP) have demonstrated their extensive knowledge and mastery of project management concepts, tasks, and techniques that are applicable across virtually any industry and methodology. Earners are able to speak and understand the global language of project management. Individuals that earn this certification have demonstrated the knowledge and skills needed to initiate, plan, execute, monitor and control, and close a project."
       },
       {
         "image": "images/resume/cityu.jfif",
@@ -73,14 +80,14 @@
         "image": "images/resume/ckh.jfif",
         "company": "CK Hutchison Holdings Ltd.",
         "title": "Senior Analyst Programmer",
-        "years": "May 2022 - Present",
-        "description1": "Develop Oracle Apex Form",
+        "years": "May 2022 - Aug 2023",
+        "description1": "Develop Oracle Apex Form for Salary Review Module",
         "description2": "Perform SIT on Oracle HRMS version upgrade",
-        "description3": "Develop RPA tasks using Automation Anywhere",
-        "description4": "",
-        "description5": "",
-        "description6": ""
-      },                       
+        "description3": "UiPath implementation for replacing Automation Anywhere",
+        "description4": "POC on REST API for Oracle Fusion Cloud Financials (AR/AP invoices import, GL Journal import)",
+        "description5": "Develop financial reports using Oracle FRS",
+        "description6": "Excel Input Form Program (VBA) Enhancement"
+      },
       {
         "id": 8,
         "image": "images/resume/d1.jfif",
@@ -460,6 +467,10 @@
   },
   "testimonials": {
     "testimonials": [
+      {
+        "text": "Jimmy is a conscientious & capable IT professional and interacted well with colleagues. During his employment with us, we found his performance to be highly satisfactory.",
+        "user": "Maggie Chan - Manager - Applications Delivery at CK Hutchison Holdings Ltd."
+      },
       {
         "text": "I have been consistently impressed by both Jimmy's attitude towards his work and his performance on the job. Jimmy is a very responsible person. His strong customer-oriented mind and helpful attitude are well appreciated by the users supported by him.",
         "user": "Simon Wong - Senior Application Manager at Intertek Testing Services HK Ltd."
