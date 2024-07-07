@@ -76,6 +76,22 @@
     ],
     "work": [
       {
+        "id": 10,
+        "image": "images/resume/esri.jpg",
+        "company": "Esri China (Hong Kong) Limited",
+        "title": "System Analyst",
+        "years": "Nov 2023 - Present",
+        "description1": "Developing applications with seamless integration of ArcGIS technology",
+        "description2": "Overseeing multiple projects concurrently, ensuring successful execution and delivery",
+        "description3": "Managing projects for HKIA and various government departments",
+        "description4": "Conducting user requirements gathering and analysis to identify project needs",
+        "description5": "Creating and maintaining comprehensive documents, including Requirement Spec., SA&D, Test Spec., IVF etc.",
+        "description6": "Designing system architecture and user interfaces (U.I. Design)",
+        "description7": "Focusing on Water Network GIS, including Potable Water, Sewerage, and Stormwater",
+        "description8": "Enhancing Android mobile app using Kotlin",
+        "description9": "Setting up Java MQTT Client for subscribing IoT Sensor data"
+      },
+      {
         "id": 9,
         "image": "images/resume/ckh.jfif",
         "company": "CK Hutchison Holdings Ltd.",
@@ -83,10 +99,11 @@
         "years": "May 2022 - Aug 2023",
         "description1": "Develop Oracle Apex Form for Salary Review Module",
         "description2": "Perform SIT on Oracle HRMS version upgrade",
-        "description3": "UiPath implementation for replacing Automation Anywhere",
-        "description4": "POC on REST API for Oracle Fusion Cloud Financials (AR/AP invoices import, GL Journal import)",
-        "description5": "Develop financial reports using Oracle FRS",
-        "description6": "Excel Input Form Program (VBA) Enhancement"
+        "description3": "Develop financial reports using Oracle FRS",
+        "description4": "Excel Input Form Program (VBA) Enhancement",
+        "description5": "UiPath System Owner",
+        "description6": "UiPath Workflow development -> AR/AP invoices import, GL Journal import to Oracle Fusion Cloud",
+        "description7": "UiPath Apps development -> Reports separation for HR staffs"
       },
       {
         "id": 8,
@@ -216,27 +233,17 @@
           {
             "image": "images/skills/vuejs.webp",
             "name": "Vue.js",
-            "level": "60%"
-          },
-          {
-            "image": "images/skills/react.webp",
-            "name": "React.js",
-            "level": "60%"
+            "level": "80%"
           },
           {
             "image": "images/skills/tailwind.webp",
             "name": "Tailwind CSS",
-            "level": "55%"
+            "level": "65%"
           },
           {
             "image": "images/skills/bootstrap.webp",
             "name": "Bootstrap",
-            "level": "68%"
-          },
-          {
-            "image": "images/skills/ejs.webp",
-            "name": "EJS",
-            "level": "55%"
+            "level": "75%"
           },
           {
             "image": "images/skills/jquery.webp",
@@ -261,13 +268,13 @@
           },
           {
             "image": "images/skills/aspnet.webp",
-            "name": "ASP.Net",
+            "name": ".Net Framework",
             "level": "95%"
           },
           {
-            "image": "images/skills/netcore.webp",
-            "name": "ASP.Net Core",
-            "level": "55%"
+            "image": "images/skills/net.png",
+            "name": ".Net",
+            "level": "70%"
           },
           {
             "image": "images/skills/csharp.webp",
@@ -282,22 +289,22 @@
           {
             "image": "images/skills/laravel.webp",
             "name": "Laravel",
-            "level": "50%"
+            "level": "40%"
           },
           {
             "image": "images/skills/php.webp",
             "name": "PHP",
-            "level": "50%"
+            "level": "40%"
           },
           {
             "image": "images/skills/nodejs.webp",
             "name": "Node.js",
-            "level": "60%"
+            "level": "70%"
           },
           {
             "image": "images/skills/express.webp",
             "name": "Express.js",
-            "level": "60%"
+            "level": "70%"
           }
         ]
       },
@@ -344,7 +351,7 @@
           {
             "image": "images/skills/aws.webp",
             "name": "AWS (Some Resources)",
-            "level": "35%"
+            "level": "60%"
           },
           {
             "image": "images/skills/gcp.webp",
@@ -405,11 +412,6 @@
             "level": "90%"
           },
           {
-            "image": "images/skills/aspose.webp",
-            "name": "Aspose",
-            "level": "50%"
-          },
-          {
             "image": "images/skills/npoi.webp",
             "name": "NPOI",
             "level": "85%"
@@ -417,12 +419,7 @@
           {
             "image": "images/skills/uipath.webp",
             "name": "UiPath",
-            "level": "50%"
-          },
-          {
-            "image": "images/skills/default.webp",
-            "name": "Kodak Capture Pro",
-            "level": "50%"
+            "level": "65%"
           },
           {
             "image": "images/skills/office.webp",
@@ -435,6 +432,27 @@
   },
   "portfolio": {
     "projects": [
+      {
+        "id": 7,
+        "multipleImages": true,
+        "title": "AGIS Stormwater and Dashboard",
+        "category": "Esri China (Hong Kong)",
+        "image": "stormwater.png",
+        "urls": [
+          {
+            "id": 3,
+            "url": "images/portfolio/stormwater3.png"
+          },
+          {
+            "id": 2,
+            "url": "images/portfolio/stormwater2.png"
+          },
+          {
+            "id": 1,
+            "url": "images/portfolio/stormwater.png"
+          }
+        ]
+      },
       {
         "id": 6,
         "title": "UiPath Implementation",

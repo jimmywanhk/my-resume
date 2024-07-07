@@ -40,6 +40,9 @@ class Resume extends Component {
                 {work.description4 && <li>{work.description4}</li>}
                 {work.description5 && <li>{work.description5}</li>}
                 {work.description6 && <li>{work.description6}</li>}
+                {work.description7 && <li>{work.description7}</li>}
+                {work.description8 && <li>{work.description8}</li>}
+                {work.description9 && <li>{work.description9}</li>}
               </ul>
             </div>
           </div>
@@ -117,7 +120,7 @@ class Resume extends Component {
             </div>
 
             <div className="nine columns main-col skills-carousel">
-              <Carousel interval={3000}>{skills}</Carousel>
+              <Carousel interval={2000}>{skills}</Carousel>
             </div>
           </div>
         </div>
