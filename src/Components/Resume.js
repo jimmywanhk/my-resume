@@ -120,7 +120,9 @@ class Resume extends Component {
             </div>
 
             <div className="nine columns main-col skills-carousel">
-              <Carousel interval={2000}>{skills}</Carousel>
+              <Carousel interval={2500} pause={false}>
+                {skills}
+              </Carousel>
             </div>
           </div>
         </div>

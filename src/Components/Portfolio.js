@@ -8,12 +8,19 @@ class Portfolio extends Component {
         var projectImage = "images/portfolio/" + projects.image;
         if (projects.multipleImages) {
           return (
-            <div>
-              <Carousel key={projects.id} interval={2000}>
+            <div class="protfolio-carousel">
+              <Carousel
+                key={projects.id}
+                interval={2500}
+                pause={false}
+                fade={true}
+              >
                 {projects.urls.map(function (url) {
                   return (
                     <Carousel.Item key={url.id}>
-                      <img src={url.url} alt="Project Image" />
+                      <a href={url.url} title={projects.title}>
+                        <img alt={projects.title} src={url.url} />
+                      </a>
                     </Carousel.Item>
                   );
                 })}

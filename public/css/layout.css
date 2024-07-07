@@ -632,6 +632,11 @@ ul#nav li.current a { color: #FF3B5B; } */
 }
 
 /* Portfolio Content */
+.protfolio-carousel {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 #portfolio-wrapper .columns {
   margin-bottom: 36px;
 }
